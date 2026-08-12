@@ -33,3 +33,7 @@ npm test
 
 - `develop`: desenvolvimento e homologação.
 - `main`: produção; recebe merge somente após as validações.
+
+## Prévia no GitHub Pages
+
+Cada atualização aprovada e enviada para `main` publica automaticamente uma prévia estática. Alterações em `develop` não afetam o endereço público até serem testadas e promovidas.
