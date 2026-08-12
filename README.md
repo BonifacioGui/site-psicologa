@@ -37,3 +37,5 @@ npm test
 ## Prévia no GitHub Pages
 
 Cada atualização aprovada e enviada para `main` publica automaticamente uma prévia estática. Alterações em `develop` não afetam o endereço público até serem testadas e promovidas.
+
+O GitHub Pages é usado somente para protótipo e revisão. A versão profissional final deve usar hospedagem apropriada, domínio próprio e configuração de cabeçalhos de segurança no provedor. Os headers definidos em `next.config.ts` não devem ser considerados ativos na exportação estática do Pages.
