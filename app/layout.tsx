@@ -1,38 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Starter Project",
-  description: "A clean starting point for building your site.",
-  icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-  },
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
-}
+export const metadata: Metadata = { metadataBase:new URL("https://www.exemplo-psicologia.com.br"), title:{default:"Nome da Psicóloga | Psicoterapia online",template:"%s | Nome da Psicóloga"}, description:"Atendimento psicológico online para adolescentes e jovens adultos pela Terapia Cognitivo-Comportamental.", keywords:["psicóloga online","terapia para adolescentes","TCC"], openGraph:{type:"website",locale:"pt_BR",title:"Nome da Psicóloga | Psicoterapia online",description:"Um espaço de escuta para adolescentes e jovens adultos."}, robots:{index:true,follow:true}, icons:{icon:"/favicon.svg"} };
+const links=[["Sobre","/sobre"],["Atendimento","/atendimento"],["Abordagem","/abordagem-tcc"],["Trajetória","/formacao"],["Conteúdos","/conteudos"],["FAQ","/faq"]];
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="pt-BR"><body><a className="skip" href="#conteudo">Pular para o conteúdo</a><header><div className="shell nav"><Link className="brand" href="/"><small>Nome da</small>Psicóloga</Link><nav aria-label="Navegação principal">{links.map(([x,h])=><Link key={h} href={h}>{x}</Link>)}</nav><Link className="nav-button" href="/contato">Contato</Link></div></header><div id="conteudo">{children}</div><footer><div className="shell foot"><div><Link className="brand" href="/"><small>Nome da</small>Psicóloga</Link><p>Psicóloga · CRP 00/00000<br/>Atendimento online</p></div><div><strong>Navegue</strong><Link href="/sobre">Sobre</Link><Link href="/atendimento">Atendimento</Link><Link href="/conteudos">Conteúdos</Link></div><div><strong>Informações</strong><Link href="/faq">Perguntas frequentes</Link><Link href="/politica-de-privacidade">Privacidade</Link><Link href="/contato">Contato</Link></div><div><strong>Importante</strong><p>Este site não oferece atendimento de urgência. Em risco imediato, ligue 192 ou 188 (CVV).</p></div></div><div className="shell copy">© 2026 Nome da Psicóloga · Conteúdo informativo; não substitui avaliação profissional.</div></footer></body></html>}

@@ -1,0 +1,1 @@
+import type {Metadata} from "next";import {InfoPage} from "../components/InfoPage";import {pages} from "../content";export const metadata:Metadata={title:"Atendimento psicológico"};export default function Page(){return <InfoPage data={pages.atendimento}/>}

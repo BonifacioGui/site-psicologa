@@ -1,0 +1,3 @@
+import Link from "next/link";import {PageHero} from "./PageHero";
+export type PageData={eyebrow:string;title:string;intro:string;sections:{title:string;body:string;items?:string[]}[];notice?:string;cta?:string};
+export function InfoPage({data}:{data:PageData}){return <main><PageHero eyebrow={data.eyebrow} title={data.title} intro={data.intro}/><section className="content narrow shell prose">{data.sections.map(s=><section key={s.title}><h2>{s.title}</h2><p>{s.body}</p>{s.items&&<ul>{s.items.map(i=><li key={i}>{i}</li>)}</ul>}</section>)}{data.notice&&<div className="notice">{data.notice}</div>}{data.cta&&<p><Link className="button" href="/contato">{data.cta}</Link></p>}</section></main>}
