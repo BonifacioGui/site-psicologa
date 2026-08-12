@@ -1,15 +1,9 @@
-import type { Metadata } from "next";
-import { SkeletonPreview } from "./_sites-preview/SkeletonPreview";
-
-export const metadata: Metadata = {
-  title: "Your site is taking shape",
-  description:
-    "Your first version will appear here automatically when it’s ready.",
-  other: {
-    "codex-preview": "development",
-  },
-};
-
-export default function Home() {
-  return <SkeletonPreview />;
-}
+import Link from "next/link";
+export default function Home(){return <main>
+<section className="hero shell"><div><p className="eyebrow">Psicologia clínica · Atendimento online</p><h1>Um espaço para entender o que você sente — e construir novos caminhos.</h1><p className="lead">Psicoterapia para adolescentes e jovens adultos, com escuta acolhedora e estratégias da Terapia Cognitivo-Comportamental.</p><div className="actions"><Link className="button" href="/contato">Conversar sobre atendimento</Link><Link className="text-link" href="/atendimento">Como funciona →</Link></div></div><div className="portrait"><div className="photo"><b>NP</b><small>Sua foto profissional aqui</small></div><p>Nome da Psicóloga<br/><span>Psicóloga · CRP 00/00000</span></p></div></section>
+<section className="shell intro"><p className="index">01 — Para você</p><div><h2>Talvez você não precise ter tudo resolvido para começar.</h2><p className="lead">A terapia pode ajudar a organizar pensamentos, compreender emoções e experimentar formas mais saudáveis de lidar com desafios — respeitando seu ritmo e sua história.</p></div></section>
+<section className="shell section"><p className="eyebrow">Atendimentos</p><div className="section-title"><h2>Escuta para diferentes momentos.</h2><Link className="text-link" href="/atendimento">Ver detalhes →</Link></div><div className="cards"><Link className="card wine" href="/adolescentes"><span>Adolescentes</span><h3>Um lugar seguro para se perceber, se expressar e crescer.</h3><p>Autoconhecimento, relações, escola, ansiedade e mudanças dessa fase.</p><b>↗</b></Link><Link className="card plum" href="/jovens-adultos"><span>Jovens adultos</span><h3>Mais clareza para atravessar escolhas, cobranças e recomeços.</h3><p>Identidade, carreira, vínculos, autoestima e transições da vida adulta.</p><b>↗</b></Link></div></section>
+<section className="dark"><div className="shell split"><div><p className="eyebrow pale">Abordagem</p><h2>TCC: compreender padrões para transformar possibilidades.</h2></div><div><p>A Terapia Cognitivo-Comportamental investiga a relação entre pensamentos, emoções e comportamentos. É um trabalho colaborativo, com objetivos construídos em conjunto e ferramentas para a vida real.</p><Link className="button light" href="/abordagem-tcc">Conhecer a abordagem</Link></div></div></section>
+<section className="shell quote"><p className="index">02 — Sobre mim</p><div><blockquote>“Acredito em uma Psicologia próxima, ética e possível — que acolhe sem julgamentos.”</blockquote><p>Minha trajetória une formação contínua e o compromisso de oferecer uma escuta responsável.</p><Link className="text-link" href="/sobre">Conheça minha trajetória →</Link></div></section>
+<section className="cta"><p className="eyebrow pale">Primeiro passo</p><h2>Podemos conversar?</h2><p>Não é necessário contar detalhes clínicos na primeira mensagem.</p><Link className="button light" href="/contato">Entrar em contato</Link></section>
+</main>}
