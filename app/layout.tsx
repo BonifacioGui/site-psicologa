@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import "@fontsource/dm-serif-display/400.css";
+import "@fontsource/manrope/400.css";
+import "@fontsource/manrope/500.css";
+import "@fontsource/manrope/600.css";
+import "@fontsource/manrope/700.css";
 import "./globals.css";
 import "./revision.css";
 import "./trajectory.css";
+import "./interactions.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.exemplo-psicologia.com.br"),

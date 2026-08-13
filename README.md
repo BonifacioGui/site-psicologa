@@ -21,6 +21,11 @@ Revise também a política de privacidade com os dados reais da profissional e d
 - Rosa: `#F9DDDF`
 - Cinza: `#8C8C8D`
 
+## Tipografia
+
+- Títulos: DM Serif Display
+- Textos e interface: Manrope
+
 ## Desenvolvimento
 
 ```bash

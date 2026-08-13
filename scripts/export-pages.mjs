@@ -1,4 +1,4 @@
-import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const repository = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "site-psicologa";
@@ -13,6 +13,30 @@ const { default: worker } = await import(workerUrl.href);
 await rm("out", { recursive: true, force: true });
 await mkdir("out", { recursive: true });
 await cp("dist/client", "out", { recursive: true });
+
+async function rewriteCssAssetUrls(directory) {
+  const entries = await readdir(directory, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const filePath = path.join(directory, entry.name);
+
+    if (entry.isDirectory()) {
+      await rewriteCssAssetUrls(filePath);
+      continue;
+    }
+
+    if (!entry.name.endsWith(".css")) continue;
+
+    const css = await readFile(filePath, "utf8");
+    const rewrittenCss = css.replaceAll("url(/_next/", `url(${basePath}/_next/`);
+
+    if (rewrittenCss !== css) {
+      await writeFile(filePath, rewrittenCss, "utf8");
+    }
+  }
+}
+
+await rewriteCssAssetUrls("out");
 
 for (const route of routes) {
   const response = await worker.fetch(

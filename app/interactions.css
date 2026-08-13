@@ -1,0 +1,188 @@
+:root {
+  --serif: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --sans: "Manrope", Arial, "Helvetica Neue", sans-serif;
+  --ease-refined: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body {
+  font-family: var(--sans);
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+blockquote,
+.brand,
+.portrait > p,
+.contact-link b,
+.faq summary,
+.session-facts strong {
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+.button,
+.card,
+.card > b,
+.nav-button,
+.profile-photo,
+.about-photo-real {
+  transition:
+    transform 420ms var(--ease-refined),
+    box-shadow 420ms var(--ease-refined),
+    border-color 280ms ease,
+    background-color 280ms ease,
+    color 280ms ease;
+}
+
+.button:hover,
+.nav-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px -24px rgb(8 15 22 / 72%);
+}
+
+.button:active,
+.nav-button:active {
+  transform: translateY(-1px);
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 30px 60px -38px rgb(8 15 22 / 65%);
+}
+
+.card:hover > b {
+  transform: translate(4px, -4px);
+}
+
+.text-link,
+.nav nav a,
+.foot a {
+  position: relative;
+}
+
+.text-link {
+  border-bottom: 0;
+  padding-bottom: 4px;
+}
+
+.text-link::after,
+.nav nav a::after,
+.foot a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: currentColor;
+  opacity: 0.6;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition:
+    transform 360ms var(--ease-refined),
+    opacity 200ms ease;
+}
+
+.text-link::after {
+  opacity: 0.8;
+  transform: scaleX(0.3);
+  transform-origin: left;
+}
+
+.text-link:hover::after,
+.text-link:focus-visible::after,
+.nav nav a:hover::after,
+.nav nav a:focus-visible::after,
+.foot a:hover::after,
+.foot a:focus-visible::after {
+  opacity: 1;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.portrait:hover .profile-photo,
+.about-photo-real:hover {
+  transform: scale(1.015);
+}
+
+@keyframes hero-arrival {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes refined-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-copy,
+.page-hero > div {
+  animation: hero-arrival 720ms var(--ease-refined) both;
+}
+
+.portrait {
+  animation: hero-arrival 800ms 100ms var(--ease-refined) both;
+}
+
+@supports (animation-timeline: view()) {
+  .intro,
+  .section,
+  .dark > .shell,
+  .quote,
+  .cta > *,
+  .content,
+  .presence-copy,
+  .personal-grid {
+    animation-name: refined-reveal;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 28%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy,
+  .page-hero > div,
+  .portrait,
+  .intro,
+  .section,
+  .dark > .shell,
+  .quote,
+  .cta > *,
+  .content,
+  .presence-copy,
+  .personal-grid {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .button,
+  .card,
+  .card > b,
+  .nav-button,
+  .profile-photo,
+  .about-photo-real,
+  .text-link::after,
+  .nav nav a::after,
+  .foot a::after {
+    transition: none !important;
+  }
+}
