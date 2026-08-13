@@ -18,7 +18,17 @@ export default function Home() {
       </div>
       <figure className="portrait">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="profile-photo hero-profile-photo" src="/ana-livia-hero.jpg" alt="Ana Lívia sorrindo, apoiada sobre livros" width="960" height="1280" />
+        <img
+          className="profile-photo hero-profile-photo"
+          src="/ana-livia-hero.jpg"
+          srcSet="/ana-livia-hero-480.jpg 480w, /ana-livia-hero.jpg 960w"
+          sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) calc(100vw - 48px), 420px"
+          alt="Ana Lívia sorrindo, apoiada sobre livros"
+          width="960"
+          height="1280"
+          fetchPriority="high"
+          decoding="async"
+        />
         <figcaption>Ana Lívia Calado da Costa</figcaption>
       </figure>
     </section>

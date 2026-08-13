@@ -14,7 +14,17 @@ export default function Page() {
     <section className="content shell about-grid">
       <figure className="about-photo-real">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="profile-photo" src="/ana-livia-sobre.jpg" alt="Retrato profissional de Ana Lívia Calado da Costa" width="960" height="1280" />
+        <img
+          className="profile-photo"
+          src="/ana-livia-sobre.jpg"
+          srcSet="/ana-livia-sobre-480.jpg 480w, /ana-livia-sobre.jpg 960w"
+          sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) calc(100vw - 48px), 430px"
+          alt="Retrato profissional de Ana Lívia Calado da Costa"
+          width="960"
+          height="1280"
+          loading="lazy"
+          decoding="async"
+        />
         <figcaption>Ana Lívia Calado da Costa<br /><span>Psicóloga · CRP 02/34611</span></figcaption>
       </figure>
       <div className="prose about-story">
