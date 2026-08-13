@@ -38,7 +38,7 @@ await writeFile("out/robots.txt", `User-agent: *\nAllow: /\nSitemap: ${origin}/s
 await writeFile("out/.nojekyll", "", "utf8");
 
 const index = await readFile("out/index.html", "utf8");
-if (!index.includes("Nome da Psicóloga") || !index.includes("Psicoterapia online para adolescentes") || !index.includes(`${basePath}/_next/`)) {
+if (!index.includes("Ana Lívia Calado da Costa") || !index.includes("CRP 02/34611") || !index.includes("Psicoterapia online para adolescentes") || !index.includes(`${basePath}/_next/`)) {
   throw new Error("A validação da exportação estática falhou.");
 }
 console.log(`Exportação pronta em out para ${origin}`);

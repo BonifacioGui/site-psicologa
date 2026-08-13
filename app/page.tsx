@@ -5,7 +5,7 @@ export default function Home() {
     <section className="hero shell">
       <div className="hero-copy">
         <p className="eyebrow">Atendimento psicológico online</p>
-        <h1 className="professional-name">Nome da Psicóloga</h1>
+        <h1 className="professional-name">Ana Lívia Calado da Costa</h1>
         <p className="professional-id">Psicóloga <span aria-hidden="true">·</span> CRP 02/34611</p>
         <h2 className="hero-service">Psicoterapia online para adolescentes e jovens adultos.</h2>
         <p className="approach-label">Terapia Cognitivo-Comportamental</p>
@@ -16,7 +16,7 @@ export default function Home() {
         </div>
       </div>
       <div className="portrait" aria-label="Espaço reservado para foto profissional">
-        <div className="photo"><b>NP</b><small>Sua foto profissional aqui</small></div>
+        <div className="photo"><b>AL</b><small>Sua foto profissional aqui</small></div>
       </div>
     </section>
 

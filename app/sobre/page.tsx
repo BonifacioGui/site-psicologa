@@ -8,7 +8,7 @@ export default function Page() {
   return <main>
     <PageHero eyebrow="Sobre mim" title="Antes da abordagem, existe uma pessoa." intro="Conheça a trajetória que me trouxe à clínica e o que orienta meu trabalho com adolescentes e jovens adultos." />
     <section className="content shell about-grid">
-      <div className="about-photo" aria-label="Espaço reservado para foto profissional"><span>NP</span><small>Adicionar fotografia profissional</small></div>
+      <div className="about-photo" aria-label="Espaço reservado para foto profissional"><span>AL</span><small>Adicionar fotografia profissional</small></div>
       <div className="prose about-story">
         <p className="eyebrow">Minha trajetória</p>
         <h2>Por que escolhi Psicologia</h2>
