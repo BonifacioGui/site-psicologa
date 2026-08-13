@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { professionalContact } from "./site";
 
 export default function Home() {
   return <main>
@@ -11,7 +12,7 @@ export default function Home() {
         <p className="approach-label">Terapia Cognitivo-Comportamental</p>
         <p className="hero-emotional">Um trabalho para compreender o que acontece hoje, reconhecer padrões e testar respostas mais úteis na vida real.</p>
         <div className="actions">
-          <Link className="button" href="/contato">Conversar sobre atendimento</Link>
+          <a className="button" href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">Conversar sobre atendimento</a>
           <a className="text-link" href="#atendimentos">Conheça o atendimento ↓</a>
         </div>
       </div>
@@ -40,6 +41,6 @@ export default function Home() {
 
     <section className="shell quote"><p className="index">02 — Sobre mim</p><div><blockquote>Psicologia, formação contínua e interesse genuíno pelas experiências de adolescentes e jovens adultos.</blockquote><p>Conheça minha trajetória, por que escolhi a clínica, os temas que estudo e um pouco de quem existe fora do consultório.</p><Link className="text-link" href="/sobre">Conheça a profissional →</Link></div></section>
 
-    <section className="cta"><p className="eyebrow pale">Contato inicial</p><h2>Quer saber sobre horários e valores?</h2><p>Envie uma mensagem breve. Não é necessário relatar questões clínicas pelo WhatsApp.</p><Link className="button light" href="/contato">Conversar sobre atendimento</Link></section>
+    <section className="cta"><p className="eyebrow pale">Contato inicial</p><h2>Quer saber sobre horários e valores?</h2><p>Envie uma mensagem breve. Não é necessário relatar questões clínicas pelo WhatsApp.</p><a className="button light" href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">Conversar pelo WhatsApp</a></section>
   </main>;
 }

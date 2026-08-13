@@ -4,13 +4,11 @@ Site institucional static-first em Next.js, TypeScript e Tailwind CSS. Não poss
 
 ## Personalização antes de publicar
 
-Substitua em todo o projeto:
+Pendências antes da hospedagem profissional definitiva:
 
 - confirmar se as fotografias atuais serão mantidas na versão final;
-- `contato@exemplo.com` e o canal de WhatsApp profissional;
-- os campos entre colchetes na página de formação;
-- `https://www.exemplo-psicologia.com.br` em metadata, sitemap e robots;
-- a imagem provisória por uma fotografia autorizada.
+- inserir o `@` do Instagram profissional quando o perfil for confirmado;
+- substituir o endereço provisório do GitHub Pages pelo domínio definitivo em metadata, sitemap e robots.
 
 Revise também a política de privacidade com os dados reais da profissional e do provedor de hospedagem.
 

@@ -121,6 +121,10 @@ footer,
   color: var(--wine);
 }
 
+.cta .button.light {
+  color: var(--wine);
+}
+
 .card.plum {
   background: var(--rose);
   color: var(--ink);

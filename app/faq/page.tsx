@@ -44,7 +44,11 @@ const faq = [
   },
   {
     question: "Quanto tempo dura cada sessão?",
-    answer: ["Cada sessão dura aproximadamente 45 minutos e acontece em horário previamente agendado e combinado com você."],
+    answer: ["Cada sessão dura aproximadamente 45 minutos e acontece online pelo Google Meet, em horário definido conforme disponibilidade e agendamento prévio."],
+  },
+  {
+    question: "Como saber o valor da sessão?",
+    answer: ["O valor é informado no contato inicial, em espaço reservado. A orientação profissional é que o preço não seja utilizado como forma de propaganda."],
   },
   {
     question: "Receberei um contrato?",
