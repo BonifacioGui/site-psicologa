@@ -16,10 +16,13 @@ Revise também a política de privacidade com os dados reais da profissional e d
 
 ## Paleta
 
-- Preto azulado: `#080F16`
-- Cinza-base: `#C5CACE`
-- Rosa: `#F9DDDF`
-- Cinza de apoio: `#8C8C8D`
+- Marfim: `#F7F3EE`
+- Taupe/cinza quente: `#EEE7E2`
+- Vinho/ameixa: `#743B4D`
+- Rosé queimado: `#D9B7BD`
+- Grafite quase preto: `#171B20`
+- Texto principal: `#252124`
+- Texto secundário: `#676064`
 
 ## Tipografia
 

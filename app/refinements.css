@@ -1,10 +1,15 @@
 :root {
-  --paper: #c5cace;
-  --surface-gray: #c5cace;
-  --ink: #080f16;
-  --wine: #080f16;
-  --cream: #f9dddf;
-  --line: rgb(8 15 22 / 24%);
+  --paper: #f7f3ee;
+  --surface-gray: #eee7e2;
+  --ink: #252124;
+  --wine: #743b4d;
+  --plum: #743b4d;
+  --cream: #d9b7bd;
+  --rose: #d9b7bd;
+  --dark: #171b20;
+  --muted: #676064;
+  --ivory: #f7f3ee;
+  --line: rgb(37 33 36 / 20%);
 }
 
 html {
@@ -12,7 +17,11 @@ html {
 }
 
 body,
-.skip,
+.skip {
+  background: var(--ivory);
+  color: var(--ink);
+}
+
 .audience-card.guardian,
 .personal-section,
 .study-list span {
@@ -21,8 +30,8 @@ body,
 }
 
 header {
-  background: rgb(197 202 206 / 92%);
-  border-bottom-color: rgb(8 15 22 / 16%);
+  background: rgb(247 243 238 / 92%);
+  border-bottom-color: rgb(37 33 36 / 14%);
   color: var(--ink);
 }
 
@@ -35,13 +44,14 @@ header {
 .study-grid > div:first-child > p:last-child,
 .personal-grid > div > p,
 .faq-answer p {
-  color: var(--ink);
+  color: var(--muted);
 }
 
-.button,
-.card.wine,
+.approach-label {
+  color: var(--wine);
+}
+
 .dark,
-.cta,
 .contract-band,
 .about-details,
 .presence-band,
@@ -49,48 +59,103 @@ header {
 footer,
 .portrait figcaption,
 .about-photo-real figcaption {
-  background: var(--ink);
-  color: var(--cream);
+  background: var(--dark);
+  color: var(--ivory);
 }
 
-:is(.card.wine, .dark, .cta, .contract-band, .about-details, .presence-band, .online-band, footer) :is(h1, h2, h3, p, li, a, span, strong, blockquote),
-.card.wine > b,
-.foot p,
-.foot strong,
-.copy,
+:is(.dark, .contract-band, .about-details, .presence-band, .online-band, footer) :is(h1, h2, h3, strong, blockquote),
 .portrait figcaption,
-.about-photo-real figcaption,
-.button {
-  color: var(--cream);
+.about-photo-real figcaption {
+  color: var(--ivory);
 }
 
-.button.light,
+.about-photo-real figcaption span {
+  color: var(--rose);
+}
+
+:is(.dark, .contract-band, .about-details, .presence-band, .online-band, footer) :is(p, li, a, span),
+.foot p,
+.copy {
+  color: var(--rose);
+}
+
+.button,
+.card.wine,
+.cta {
+  background: var(--wine);
+  border-color: var(--wine);
+  color: var(--ivory);
+}
+
+:is(.card.wine, .cta) :is(h1, h2, h3, p, li, a, span, strong, blockquote),
+.card.wine > b,
+.button {
+  color: var(--ivory);
+}
+
 .page-hero,
 .info,
 .step,
 .post,
-.notice,
 .audience-card.teen,
-.professional-id,
 .values-band {
-  background: var(--cream);
+  background: var(--surface-gray);
   color: var(--ink);
 }
 
-:is(.page-hero, .info, .step, .post, .notice, .audience-card.teen, .values-band) :is(h1, h2, h3, p, li, a, span, strong),
-.button.light,
-.professional-id {
+:is(.page-hero, .info, .step, .post, .audience-card.teen, .values-band) :is(h1, h2, h3, p, li, a, span, strong) {
   color: var(--ink);
+}
+
+.professional-id,
+.notice,
+.study-list span:nth-child(3n+1) {
+  background: var(--rose);
+  border-color: var(--rose);
+  color: var(--ink);
+}
+
+.button.light {
+  background: var(--ivory);
+  border-color: var(--ivory);
+  color: var(--wine);
 }
 
 .card.plum {
-  background: #8c8c8d;
+  background: var(--rose);
   color: var(--ink);
 }
 
 .card.plum p,
 .card.plum > b {
   color: var(--ink);
+}
+
+.portrait,
+.about-photo-real {
+  background: var(--surface-gray);
+}
+
+.portrait::before {
+  border-color: rgb(116 59 77 / 34%);
+}
+
+.story-quote {
+  color: var(--ink);
+  border-left-color: var(--rose);
+}
+
+.study-list span {
+  border-color: rgb(116 59 77 / 45%);
+}
+
+.quote blockquote,
+.faq summary::after {
+  color: var(--wine);
+}
+
+.faq-expanded details[open] {
+  background: linear-gradient(90deg, var(--rose) 0 5px, transparent 5px);
 }
 
 .values-band {
@@ -172,11 +237,11 @@ footer,
 
 a:focus-visible,
 summary:focus-visible {
-  outline-color: var(--ink);
+  outline-color: var(--wine);
 }
 
 :is(.dark, .cta, .about-details, .presence-band, footer) a:focus-visible {
-  outline-color: var(--cream);
+  outline-color: var(--rose);
 }
 
 @keyframes compact-navigation {
@@ -191,11 +256,11 @@ summary:focus-visible {
 
 @keyframes elevate-header {
   from {
-    box-shadow: 0 0 0 rgb(8 15 22 / 0%);
+    box-shadow: 0 0 0 rgb(23 27 32 / 0%);
   }
 
   to {
-    box-shadow: 0 14px 34px -28px rgb(8 15 22 / 78%);
+    box-shadow: 0 14px 34px -28px rgb(23 27 32 / 64%);
   }
 }
 
