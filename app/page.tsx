@@ -12,7 +12,7 @@ export default function Home() {
         <p className="hero-emotional">Um trabalho para compreender o que acontece hoje, reconhecer padrões e testar respostas mais úteis na vida real.</p>
         <div className="actions">
           <Link className="button" href="/contato">Conversar sobre atendimento</Link>
-          <Link className="text-link" href="/atendimento">Entender as sessões →</Link>
+          <a className="text-link" href="#atendimentos">Conheça o atendimento ↓</a>
         </div>
       </div>
       <figure className="portrait">
@@ -27,7 +27,7 @@ export default function Home() {
       <div><h2>Uma sessão com direção, sem respostas prontas.</h2><p className="lead">Nas sessões, investigamos situações concretas: o que aconteceu, quais pensamentos apareceram, como isso afetou suas emoções e o que você fez em seguida. A partir daí, definimos objetivos, observamos padrões e construímos estratégias que possam ser usadas fora da terapia.</p></div>
     </section>
 
-    <section className="shell section">
+    <section id="atendimentos" className="shell section anchor-target">
       <p className="eyebrow">Atendimentos</p>
       <div className="section-title"><h2>Questões diferentes pedem conversas diferentes.</h2><Link className="text-link" href="/atendimento">Como funciona →</Link></div>
       <div className="cards">

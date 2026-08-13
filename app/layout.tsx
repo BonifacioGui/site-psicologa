@@ -9,6 +9,7 @@ import "./globals.css";
 import "./revision.css";
 import "./trajectory.css";
 import "./interactions.css";
+import "./refinements.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.exemplo-psicologia.com.br"),

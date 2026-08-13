@@ -1,0 +1,244 @@
+:root {
+  --paper: #c5cace;
+  --surface-gray: #c5cace;
+  --ink: #080f16;
+  --wine: #080f16;
+  --cream: #f9dddf;
+  --line: rgb(8 15 22 / 24%);
+}
+
+html {
+  scroll-padding-top: 96px;
+}
+
+body,
+.skip,
+.audience-card.guardian,
+.personal-section,
+.study-list span {
+  background: var(--surface-gray);
+  color: var(--ink);
+}
+
+header {
+  background: rgb(197 202 206 / 92%);
+  border-bottom-color: rgb(8 15 22 / 16%);
+  color: var(--ink);
+}
+
+.lead,
+.hero-emotional,
+.prose p,
+.prose li,
+.session-summary > p:last-child,
+.about-story > p,
+.study-grid > div:first-child > p:last-child,
+.personal-grid > div > p,
+.faq-answer p {
+  color: var(--ink);
+}
+
+.button,
+.card.wine,
+.dark,
+.cta,
+.contract-band,
+.about-details,
+.presence-band,
+.online-band,
+footer,
+.portrait figcaption,
+.about-photo-real figcaption {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+:is(.card.wine, .dark, .cta, .contract-band, .about-details, .presence-band, .online-band, footer) :is(h1, h2, h3, p, li, a, span, strong, blockquote),
+.card.wine > b,
+.foot p,
+.foot strong,
+.copy,
+.portrait figcaption,
+.about-photo-real figcaption,
+.button {
+  color: var(--cream);
+}
+
+.button.light,
+.page-hero,
+.info,
+.step,
+.post,
+.notice,
+.audience-card.teen,
+.professional-id,
+.values-band {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+:is(.page-hero, .info, .step, .post, .notice, .audience-card.teen, .values-band) :is(h1, h2, h3, p, li, a, span, strong),
+.button.light,
+.professional-id {
+  color: var(--ink);
+}
+
+.card.plum {
+  background: #8c8c8d;
+  color: var(--ink);
+}
+
+.card.plum p,
+.card.plum > b {
+  color: var(--ink);
+}
+
+.values-band {
+  padding: 105px 0;
+}
+
+.values-band li {
+  margin-bottom: 8px;
+}
+
+.faq-callout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.faq-callout h2 {
+  margin-bottom: 0;
+}
+
+.anchor-bar {
+  background: var(--surface-gray);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.anchor-navigation {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  min-height: 64px;
+  color: var(--ink);
+}
+
+.anchor-label {
+  flex: 0 0 auto;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.anchor-navigation > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+
+.anchor-navigation a {
+  position: relative;
+  padding: 5px 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.anchor-navigation a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 360ms var(--ease-refined);
+}
+
+.anchor-navigation a:hover::after,
+.anchor-navigation a:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.anchor-target {
+  scroll-margin-top: 96px;
+}
+
+a:focus-visible,
+summary:focus-visible {
+  outline-color: var(--ink);
+}
+
+:is(.dark, .cta, .about-details, .presence-band, footer) a:focus-visible {
+  outline-color: var(--cream);
+}
+
+@keyframes compact-navigation {
+  from {
+    height: 82px;
+  }
+
+  to {
+    height: 66px;
+  }
+}
+
+@keyframes elevate-header {
+  from {
+    box-shadow: 0 0 0 rgb(8 15 22 / 0%);
+  }
+
+  to {
+    box-shadow: 0 14px 34px -28px rgb(8 15 22 / 78%);
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .nav {
+      animation: compact-navigation linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 120px;
+    }
+
+    header {
+      animation: elevate-header linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 120px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .faq-callout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 700px) {
+  .anchor-navigation {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0;
+  }
+
+  .anchor-navigation > div {
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-bottom: 4px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .anchor-navigation a {
+    flex: 0 0 auto;
+  }
+}

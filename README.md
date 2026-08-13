@@ -17,9 +17,9 @@ Revise também a política de privacidade com os dados reais da profissional e d
 ## Paleta
 
 - Preto azulado: `#080F16`
-- Branco: `#FFFFFF`
+- Cinza-base: `#C5CACE`
 - Rosa: `#F9DDDF`
-- Cinza: `#8C8C8D`
+- Cinza de apoio: `#8C8C8D`
 
 ## Tipografia
 
