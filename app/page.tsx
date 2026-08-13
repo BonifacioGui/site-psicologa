@@ -6,7 +6,7 @@ export default function Home() {
       <div className="hero-copy">
         <p className="eyebrow">Atendimento psicológico online</p>
         <h1 className="professional-name">Nome da Psicóloga</h1>
-        <p className="professional-id">Psicóloga <span aria-hidden="true">·</span> CRP 00/00000</p>
+        <p className="professional-id">Psicóloga <span aria-hidden="true">·</span> CRP 02/34611</p>
         <h2 className="hero-service">Psicoterapia online para adolescentes e jovens adultos.</h2>
         <p className="approach-label">Terapia Cognitivo-Comportamental</p>
         <p className="hero-emotional">Um trabalho para compreender o que acontece hoje, reconhecer padrões e testar respostas mais úteis na vida real.</p>

@@ -6,7 +6,7 @@ Site institucional static-first em Next.js, TypeScript e Tailwind CSS. Não poss
 
 Substitua em todo o projeto:
 
-- `Nome da Psicóloga`, `CRP 00/00000` e as iniciais `NP`;
+- `Nome da Psicóloga` e as iniciais `NP`;
 - `contato@exemplo.com` e o canal de WhatsApp profissional;
 - os campos entre colchetes na página de formação;
 - `https://www.exemplo-psicologia.com.br` em metadata, sitemap e robots;
