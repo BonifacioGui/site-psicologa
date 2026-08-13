@@ -15,9 +15,11 @@ export default function Home() {
           <Link className="text-link" href="/atendimento">Entender as sessões →</Link>
         </div>
       </div>
-      <div className="portrait" aria-label="Espaço reservado para foto profissional">
-        <div className="photo"><b>AL</b><small>Sua foto profissional aqui</small></div>
-      </div>
+      <figure className="portrait">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="profile-photo hero-profile-photo" src="/ana-livia-hero.jpg" alt="Ana Lívia sorrindo, apoiada sobre livros" width="960" height="1280" />
+        <figcaption>Ana Lívia Calado da Costa</figcaption>
+      </figure>
     </section>
 
     <section className="shell intro">

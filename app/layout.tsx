@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import "./revision.css";
+import "./trajectory.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.exemplo-psicologia.com.br"),
