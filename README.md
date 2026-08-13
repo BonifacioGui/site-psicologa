@@ -6,13 +6,28 @@ Site institucional static-first em Next.js, TypeScript e Tailwind CSS. Não poss
 
 Substitua em todo o projeto:
 
-- `Nome da Psicóloga`, `CRP 00/00000` e as iniciais `NP`;
+- confirmar se as fotografias atuais serão mantidas na versão final;
 - `contato@exemplo.com` e o canal de WhatsApp profissional;
 - os campos entre colchetes na página de formação;
 - `https://www.exemplo-psicologia.com.br` em metadata, sitemap e robots;
 - a imagem provisória por uma fotografia autorizada.
 
 Revise também a política de privacidade com os dados reais da profissional e do provedor de hospedagem.
+
+## Paleta
+
+- Marfim: `#F7F3EE`
+- Taupe/cinza quente: `#EEE7E2`
+- Vinho/ameixa: `#743B4D`
+- Rosé queimado: `#D9B7BD`
+- Grafite quase preto: `#171B20`
+- Texto principal: `#252124`
+- Texto secundário: `#676064`
+
+## Tipografia
+
+- Títulos: DM Serif Display
+- Textos e interface: Manrope
 
 ## Desenvolvimento
 

@@ -5,19 +5,21 @@ export default function Home() {
     <section className="hero shell">
       <div className="hero-copy">
         <p className="eyebrow">Atendimento psicológico online</p>
-        <h1 className="professional-name">Nome da Psicóloga</h1>
-        <p className="professional-id">Psicóloga <span aria-hidden="true">·</span> CRP 00/00000</p>
+        <h1 className="professional-name">Ana Lívia Calado da Costa</h1>
+        <p className="professional-id">Psicóloga <span aria-hidden="true">·</span> CRP 02/34611</p>
         <h2 className="hero-service">Psicoterapia online para adolescentes e jovens adultos.</h2>
         <p className="approach-label">Terapia Cognitivo-Comportamental</p>
         <p className="hero-emotional">Um trabalho para compreender o que acontece hoje, reconhecer padrões e testar respostas mais úteis na vida real.</p>
         <div className="actions">
           <Link className="button" href="/contato">Conversar sobre atendimento</Link>
-          <Link className="text-link" href="/atendimento">Entender as sessões →</Link>
+          <a className="text-link" href="#atendimentos">Conheça o atendimento ↓</a>
         </div>
       </div>
-      <div className="portrait" aria-label="Espaço reservado para foto profissional">
-        <div className="photo"><b>NP</b><small>Sua foto profissional aqui</small></div>
-      </div>
+      <figure className="portrait">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="profile-photo hero-profile-photo" src="/ana-livia-hero.jpg" alt="Ana Lívia sorrindo, apoiada sobre livros" width="960" height="1280" />
+        <figcaption>Ana Lívia Calado da Costa</figcaption>
+      </figure>
     </section>
 
     <section className="shell intro">
@@ -25,7 +27,7 @@ export default function Home() {
       <div><h2>Uma sessão com direção, sem respostas prontas.</h2><p className="lead">Nas sessões, investigamos situações concretas: o que aconteceu, quais pensamentos apareceram, como isso afetou suas emoções e o que você fez em seguida. A partir daí, definimos objetivos, observamos padrões e construímos estratégias que possam ser usadas fora da terapia.</p></div>
     </section>
 
-    <section className="shell section">
+    <section id="atendimentos" className="shell section anchor-target">
       <p className="eyebrow">Atendimentos</p>
       <div className="section-title"><h2>Questões diferentes pedem conversas diferentes.</h2><Link className="text-link" href="/atendimento">Como funciona →</Link></div>
       <div className="cards">
