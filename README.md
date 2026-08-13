@@ -14,6 +14,13 @@ Substitua em todo o projeto:
 
 Revise também a política de privacidade com os dados reais da profissional e do provedor de hospedagem.
 
+## Paleta
+
+- Preto azulado: `#080F16`
+- Branco: `#FFFFFF`
+- Rosa: `#F9DDDF`
+- Cinza: `#8C8C8D`
+
 ## Desenvolvimento
 
 ```bash
