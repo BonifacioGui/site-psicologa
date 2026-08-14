@@ -17,7 +17,26 @@ export const metadata: Metadata = {
   title: { default: "Ana Lívia Calado da Costa | Psicóloga", template: "%s | Ana Lívia Calado da Costa" },
   description: "Atendimento psicológico online para adolescentes e jovens adultos pela Terapia Cognitivo-Comportamental.",
   keywords: ["psicóloga online", "terapia para adolescentes", "TCC"],
-  openGraph: { type: "website", locale: "pt_BR", title: "Ana Lívia Calado da Costa | Psicóloga", description: "Atendimento psicológico online para adolescentes e jovens adultos." },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: siteUrl,
+    siteName: "Ana Lívia Calado da Costa | Psicóloga",
+    title: "Ana Lívia Calado da Costa | Psicóloga",
+    description: "Psicoterapia online para adolescentes e jovens adultos.",
+    images: [{
+      url: `${siteUrl}/og.png`,
+      width: 1200,
+      height: 630,
+      alt: "Ana Lívia Calado da Costa, Psicóloga, CRP 02/34611",
+    }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ana Lívia Calado da Costa | Psicóloga",
+    description: "Psicoterapia online para adolescentes e jovens adultos.",
+    images: [`${siteUrl}/og.png`],
+  },
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.svg" },
 };

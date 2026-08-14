@@ -48,6 +48,13 @@ for (const route of routes) {
   let html = await response.text();
   html = html
     .replaceAll("https://www.exemplo-psicologia.com.br", origin)
+    .replace(/\b(srcSet|imageSrcSet)="([^"]+)"/g, (_, attribute, value) => {
+      const candidates = value
+        .split(",")
+        .map((candidate) => candidate.trim().replace(/^\/(?!\/)/, `${basePath}/`))
+        .join(", ");
+      return `${attribute}="${candidates}"`;
+    })
     .replace(/(href|src)="\/(?!\/)/g, `$1="${basePath}/`)
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
     .replace(/<link[^>]+rel="modulepreload"[^>]*>/gi, "");
@@ -62,7 +69,14 @@ await writeFile("out/robots.txt", `User-agent: *\nAllow: /\nSitemap: ${origin}/s
 await writeFile("out/.nojekyll", "", "utf8");
 
 const index = await readFile("out/index.html", "utf8");
-if (!index.includes("Ana Lívia Calado da Costa") || !index.includes("CRP 02/34611") || !index.includes("Psicoterapia online para adolescentes") || !index.includes(`${basePath}/_next/`)) {
+if (
+  !index.includes("Ana Lívia Calado da Costa")
+  || !index.includes("CRP 02/34611")
+  || !index.includes("Psicoterapia online para adolescentes")
+  || !index.includes(`${basePath}/_next/`)
+  || !index.includes(`srcSet="${basePath}/ana-livia-hero-480.jpg 480w, ${basePath}/ana-livia-hero.jpg 960w"`)
+  || !index.includes(`<meta property="og:image" content="${origin}/og.png"`)
+) {
   throw new Error("A validação da exportação estática falhou.");
 }
 console.log(`Exportação pronta em out para ${origin}`);

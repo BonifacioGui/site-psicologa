@@ -13,13 +13,40 @@
 }
 
 html {
+  min-height: 100%;
   scroll-padding-top: 96px;
+  background: var(--dark);
 }
 
 body,
 .skip {
   background: var(--ivory);
   color: var(--ink);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  flex-direction: column;
+  overflow-x: clip;
+}
+
+#conteudo {
+  flex: 1 0 auto;
+  min-width: 0;
+  background: var(--ivory);
+}
+
+footer {
+  flex: 0 0 auto;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+@supports not (overflow: clip) {
+  body {
+    overflow-x: hidden;
+  }
 }
 
 .audience-card.guardian,
