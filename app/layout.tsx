@@ -42,11 +42,20 @@ export const metadata: Metadata = {
 };
 
 const links = [["Sobre", "/sobre"], ["Atendimento", "/atendimento"], ["TCC", "/abordagem-tcc"], ["Conteúdos", "/conteudos"]];
+const mobileLinks = [["Início", "/"], ...links, ["FAQ", "/faq"]];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <html lang="pt-BR"><body>
     <a className="skip" href="#conteudo">Pular para o conteúdo</a>
-    <header><div className="shell nav"><Link className="brand" href="/"><small>Psicóloga</small>Ana Lívia</Link><nav aria-label="Navegação principal">{links.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</nav><Link className="nav-button" href="/contato">Contato</Link></div></header>
+    <header><div className="shell nav">
+      <Link className="brand" href="/"><small>Psicóloga</small>Ana Lívia</Link>
+      <nav aria-label="Navegação principal">{links.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</nav>
+      <Link className="nav-button" href="/contato">Contato</Link>
+      <details className="mobile-menu">
+        <summary aria-label="Menu de navegação"><span className="mobile-menu-label">Menu</span><span className="mobile-menu-icon" aria-hidden="true" /></summary>
+        <nav className="mobile-menu-panel" aria-label="Navegação móvel">{mobileLinks.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</nav>
+      </details>
+    </div></header>
     <div id="conteudo">{children}</div>
     <footer><div className="shell foot"><div><Link className="brand" href="/"><small>Psicóloga</small>Ana Lívia</Link><p>Ana Lívia Calado da Costa<br />CRP 02/34611 · Atendimento online</p></div><div><strong>Navegue</strong><Link href="/sobre">Sobre</Link><Link href="/atendimento">Atendimento</Link><Link href="/conteudos">Conteúdos</Link></div><div><strong>Contato</strong><Link href="/faq">Perguntas frequentes</Link><a href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">WhatsApp</a><a href={`mailto:${professionalContact.email}`}>E-mail</a><Link href="/politica-de-privacidade">Privacidade</Link></div><div><strong>Importante</strong><p>Este site não oferece atendimento de urgência. Em risco imediato, ligue 192 ou 188 (CVV).</p></div></div><div className="shell copy">© 2026 Ana Lívia Calado da Costa · Conteúdo informativo; não substitui avaliação profissional.</div></footer>
   </body></html>;
