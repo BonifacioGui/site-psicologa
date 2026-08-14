@@ -259,6 +259,18 @@ footer,
   color: var(--wine);
 }
 
+.button.outline {
+  background: transparent;
+  border-color: var(--wine);
+  color: var(--wine);
+}
+
+.button.outline:hover,
+.button.outline:focus-visible {
+  background: var(--wine);
+  color: var(--ivory);
+}
+
 .cta .button.light {
   color: var(--wine);
 }
@@ -306,6 +318,91 @@ footer,
 
 .values-band li {
   margin-bottom: 8px;
+}
+
+.therapy-process {
+  padding: 105px 0;
+  background: var(--surface-gray);
+  color: var(--ink);
+}
+
+.process-heading {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 90px;
+  align-items: end;
+  margin-bottom: 64px;
+}
+
+.process-heading h2 {
+  max-width: 700px;
+  margin-bottom: 0;
+}
+
+.process-heading > p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.process-step {
+  min-height: 250px;
+  padding: 24px 16px 0 0;
+  border-top: 2px solid var(--wine);
+}
+
+.process-step > span,
+.practice-grid article > span {
+  color: var(--wine);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.process-step h3 {
+  margin: 68px 0 16px;
+  font-size: 29px;
+}
+
+.process-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.practice-block {
+  margin-top: 80px;
+  padding-top: 10px;
+}
+
+.practice-block > h2 {
+  margin-top: 18px;
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.practice-grid article {
+  min-height: 180px;
+  padding: 26px;
+  background: var(--surface-gray);
+  border-top: 3px solid var(--wine);
+}
+
+.practice-grid h3 {
+  margin: 54px 0 0;
+  font-size: 27px;
 }
 
 .faq-callout {
@@ -436,6 +533,15 @@ summary:focus-visible {
     display: grid;
   }
 
+  .process-heading {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .faq-callout {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -474,5 +580,24 @@ summary:focus-visible {
 
   .anchor-navigation a {
     flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .therapy-process {
+    padding: 75px 0;
+  }
+
+  .process-heading {
+    margin-bottom: 48px;
+  }
+
+  .process-steps,
+  .practice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step {
+    min-height: 220px;
   }
 }
