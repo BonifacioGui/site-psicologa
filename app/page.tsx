@@ -3,7 +3,7 @@ import { professionalContact } from "./site";
 
 export default function Home() {
   return <main>
-    <section className="hero shell">
+    <section className="hero editorial-hero shell">
       <div className="hero-copy">
         <p className="eyebrow">Atendimento psicológico online</p>
         <h1 className="professional-name">Ana Lívia Calado da Costa</h1>
@@ -20,11 +20,13 @@ export default function Home() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className="profile-photo hero-profile-photo"
-          src="/ana-livia-cover.png"
+          src="/ana-livia-cover.jpg"
+          srcSet="/ana-livia-cover-480.jpg 480w, /ana-livia-cover.jpg 960w, /ana-livia-cover.png 2160w"
+          sizes="(max-width: 560px) calc(100vw - 30px), calc(100vw - 48px)"
           alt="Ana Lívia em um retrato com blazer claro e iluminação suave"
           width="2160"
           height="2880"
-          fetchPriority="high"
+          loading="lazy"
           decoding="async"
         />
         <figcaption>Ana Lívia Calado da Costa</figcaption>

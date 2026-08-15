@@ -1,5 +1,5 @@
 :root {
-  /* Apenas o creme principal muda; as demais cores continuam as anteriores. */
+  /* Somente o creme principal muda; as demais cores permanecem as anteriores. */
   --paper: #faf0e6;
   --ivory: #faf0e6;
 }
@@ -14,12 +14,31 @@ header {
   background: rgb(250 240 230 / 92%);
 }
 
-.hero {
+.editorial-hero {
   position: relative;
+  display: block;
+  min-height: 640px;
+  padding: 76px 0 72px;
   isolation: isolate;
 }
 
-.hero::before {
+.editorial-hero::before {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  content: "";
+  background-color: var(--ivory);
+  background-image: url("/ana-livia-hero-landscape.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transform: translateX(-50%);
+}
+
+.editorial-hero::after {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -27,105 +46,97 @@ header {
   left: 50%;
   width: 100vw;
   content: "";
-  background: linear-gradient(
-    100deg,
-    #faf0e6 0%,
-    #faf0e6 24%,
-    rgb(250 240 230 / 92%) 42%,
-    rgb(217 183 189 / 30%) 68%,
-    rgb(217 183 189 / 62%) 100%
-  );
-  transform: translateX(-50%);
-}
-
-.hero::after {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 100vw;
-  content: "";
   pointer-events: none;
   background: linear-gradient(
-    102deg,
-    transparent 16%,
-    rgb(250 240 230 / 4%) 34%,
-    rgb(217 183 189 / 8%) 52%,
-    rgb(217 183 189 / 18%) 72%,
-    rgb(116 59 77 / 14%) 100%
+    90deg,
+    rgb(250 240 230 / 16%) 0%,
+    rgb(250 240 230 / 8%) 34%,
+    transparent 58%
   );
   transform: translateX(-50%);
 }
 
-.hero-copy,
-.hero .portrait {
+.editorial-hero .hero-copy {
   position: relative;
   z-index: 1;
+  width: min(52%, 610px);
 }
 
-.hero .portrait {
-  height: 520px;
-  margin: -28px -28px -28px 0;
-  background: var(--surface-gray);
-  box-shadow: 0 28px 70px -50px rgb(23 27 32 / 52%);
-  overflow: hidden;
+.editorial-hero .professional-name {
+  max-width: 610px;
 }
 
-.hero .portrait::before {
-  display: none;
+.editorial-hero .hero-service,
+.editorial-hero .hero-emotional {
+  max-width: 570px;
 }
 
-.hero .profile-photo {
-  object-position: center 43%;
-  filter: none;
-  -webkit-mask-image: none;
-  mask-image: none;
-}
-
-.hero .portrait::after {
-  display: none;
-}
-
-.hero .portrait figcaption {
+.editorial-hero .portrait {
   display: none;
 }
 
 @media (max-width: 900px) {
-  .hero::before {
-    background: linear-gradient(
+  .editorial-hero {
+    display: grid;
+    min-height: auto;
+    padding: 62px 0 0;
+    gap: 42px;
+  }
+
+  .editorial-hero::before {
+    background-image: linear-gradient(
       180deg,
       #faf0e6 0%,
-      #faf0e6 38%,
-      rgb(217 183 189 / 24%) 68%,
-      rgb(217 183 189 / 54%) 100%
+      #faf0e6 48%,
+      rgb(217 183 189 / 34%) 100%
     );
   }
 
-  .hero::after {
-    background: linear-gradient(
-      180deg,
-      transparent 18%,
-      rgb(217 183 189 / 6%) 42%,
-      rgb(217 183 189 / 16%) 68%,
-      rgb(116 59 77 / 12%) 100%
-    );
+  .editorial-hero::after {
+    display: none;
   }
 
-  .hero .portrait {
-    height: min(620px, 112vw);
-    margin: -10px 0 -20px;
+  .editorial-hero .hero-copy {
+    width: 100%;
   }
 
+  .editorial-hero .portrait {
+    display: block;
+    width: 100%;
+    height: min(128vw, 620px);
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  .editorial-hero .portrait::before,
+  .editorial-hero .portrait::after,
+  .editorial-hero .portrait figcaption {
+    display: none;
+  }
+
+  .editorial-hero .profile-photo {
+    object-position: center 43%;
+    filter: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .editorial-hero {
+    padding-top: 52px;
+    gap: 34px;
+  }
+
+  .editorial-hero .portrait {
+    height: 122vw;
+  }
 }
 
 @media (prefers-contrast: more) {
-  .hero::before {
-    background: var(--ivory);
-  }
-
-  .hero::after,
-  .hero .portrait::after {
+  .editorial-hero::after {
     display: none;
   }
 }
