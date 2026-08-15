@@ -11,6 +11,7 @@ import "./revision.css";
 import "./trajectory.css";
 import "./interactions.css";
 import "./refinements.css";
+import "./livia-suggestions.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
