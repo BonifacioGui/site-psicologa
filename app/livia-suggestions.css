@@ -31,10 +31,13 @@ header {
   width: 100vw;
   content: "";
   background-color: var(--ivory);
-  background-image: url("/ana-livia-hero-landscape-blazer.png");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: auto 100%;
+  background-image: linear-gradient(
+    90deg,
+    #faf0e6 0%,
+    #f7eadf 40%,
+    #ead8c9 68%,
+    #d8c2ae 100%
+  );
   transform: translateX(-50%);
 }
 
@@ -47,12 +50,7 @@ header {
   width: 100vw;
   content: "";
   pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    rgb(250 240 230 / 16%) 0%,
-    rgb(250 240 230 / 8%) 34%,
-    transparent 58%
-  );
+  display: none;
   transform: translateX(-50%);
 }
 
@@ -72,7 +70,53 @@ header {
 }
 
 .editorial-hero .portrait {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: calc((100% - 100vw) / 2);
+  bottom: 0;
+  display: block;
+  width: min(56vw, 720px);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.editorial-hero .portrait::before,
+.editorial-hero .portrait::after,
+.editorial-hero .portrait figcaption {
   display: none;
+}
+
+.editorial-hero .portrait picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.editorial-hero .profile-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right center;
+  filter: none;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 12%,
+    rgb(0 0 0 / 24%) 24%,
+    black 44%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 12%,
+    rgb(0 0 0 / 24%) 24%,
+    black 44%
+  );
 }
 
 @media (max-width: 900px) {
@@ -101,6 +145,11 @@ header {
   }
 
   .editorial-hero .portrait {
+    position: relative;
+    z-index: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
     display: block;
     width: 100%;
     height: min(128vw, 620px);
@@ -108,6 +157,7 @@ header {
     background: transparent;
     box-shadow: none;
     overflow: hidden;
+    pointer-events: auto;
   }
 
   .editorial-hero .portrait::before,
@@ -117,6 +167,7 @@ header {
   }
 
   .editorial-hero .profile-photo {
+    object-fit: cover;
     object-position: center 43%;
     filter: none;
     -webkit-mask-image: none;
