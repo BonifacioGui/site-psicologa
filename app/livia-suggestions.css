@@ -34,9 +34,9 @@ header {
   background-image: linear-gradient(
     90deg,
     #faf0e6 0%,
-    #f3e2d4 24%,
-    #dfc6b0 56%,
-    #c8aa8e 100%
+    #f7e3da 48%,
+    #ebc9bf 74%,
+    #d7aaa4 100%
   );
   transform: translateX(-50%);
 }
@@ -50,13 +50,7 @@ header {
   width: 100vw;
   content: "";
   pointer-events: none;
-  display: block;
-  background: linear-gradient(
-    90deg,
-    transparent 44%,
-    rgb(216 194 174 / 10%) 62%,
-    rgb(200 170 142 / 24%) 100%
-  );
+  display: none;
   transform: translateX(-50%);
 }
 
@@ -82,7 +76,7 @@ header {
   right: calc((100% - 100vw) / 2);
   bottom: 0;
   display: block;
-  width: min(56vw, 720px);
+  width: min(65vw, 820px);
   height: 100%;
   margin: 0;
   padding: 0;
@@ -108,23 +102,11 @@ header {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: right center;
+  object-fit: cover;
+  object-position: center center;
   filter: none;
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    transparent 30%,
-    rgb(0 0 0 / 4%) 34%,
-    rgb(0 0 0 / 58%) 48%,
-    black 62%
-  );
-  mask-image: linear-gradient(
-    90deg,
-    transparent 30%,
-    rgb(0 0 0 / 4%) 34%,
-    rgb(0 0 0 / 58%) 48%,
-    black 62%
-  );
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 @media (max-width: 900px) {
@@ -166,6 +148,8 @@ header {
     box-shadow: none;
     overflow: hidden;
     pointer-events: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
   }
 
   .editorial-hero .portrait::before,

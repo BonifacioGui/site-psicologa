@@ -17,19 +17,21 @@ export default function Home() {
         </div>
       </div>
       <figure className="portrait">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="profile-photo hero-profile-photo"
-          src="/ana-livia-cover.jpg"
-          srcSet="/ana-livia-cover-480.jpg 480w, /ana-livia-cover.jpg 960w, /ana-livia-cover.png 2160w"
-          sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) calc(100vw - 48px), 1200px"
-          alt="Ana Lívia em um retrato com blazer claro e iluminação suave"
-          width="2160"
-          height="2880"
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-        />
+        <picture>
+          <source media="(min-width: 901px)" srcSet="/ana-livia-cutout.png" />
+          <img
+            className="profile-photo hero-profile-photo"
+            src="/ana-livia-cover.jpg"
+            srcSet="/ana-livia-cover-480.jpg 480w, /ana-livia-cover.jpg 960w, /ana-livia-cover-hq.jpg 2160w"
+            sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) calc(100vw - 48px), 1200px"
+            alt="Ana Lívia em um retrato com blazer claro e iluminação suave"
+            width="2160"
+            height="2880"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
         <figcaption>Ana Lívia Calado da Costa</figcaption>
       </figure>
     </section>
