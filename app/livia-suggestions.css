@@ -34,9 +34,9 @@ header {
   background-image: linear-gradient(
     90deg,
     #faf0e6 0%,
-    #f7eadf 40%,
-    #ead8c9 68%,
-    #d8c2ae 100%
+    #f3e2d4 24%,
+    #dfc6b0 56%,
+    #c8aa8e 100%
   );
   transform: translateX(-50%);
 }
@@ -50,7 +50,13 @@ header {
   width: 100vw;
   content: "";
   pointer-events: none;
-  display: none;
+  display: block;
+  background: linear-gradient(
+    90deg,
+    transparent 44%,
+    rgb(216 194 174 / 10%) 62%,
+    rgb(200 170 142 / 24%) 100%
+  );
   transform: translateX(-50%);
 }
 
@@ -107,15 +113,17 @@ header {
   filter: none;
   -webkit-mask-image: linear-gradient(
     90deg,
-    transparent 12%,
-    rgb(0 0 0 / 24%) 24%,
-    black 44%
+    transparent 30%,
+    rgb(0 0 0 / 4%) 34%,
+    rgb(0 0 0 / 58%) 48%,
+    black 62%
   );
   mask-image: linear-gradient(
     90deg,
-    transparent 12%,
-    rgb(0 0 0 / 24%) 24%,
-    black 44%
+    transparent 30%,
+    rgb(0 0 0 / 4%) 34%,
+    rgb(0 0 0 / 58%) 48%,
+    black 62%
   );
 }
 
