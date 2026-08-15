@@ -28,23 +28,48 @@ header {
   width: 100vw;
   content: "";
   background: linear-gradient(
-    94deg,
+    100deg,
     #faf0e6 0%,
-    #faf0e6 38%,
-    rgb(250 240 230 / 88%) 52%,
-    rgb(217 183 189 / 42%) 78%,
-    rgb(217 183 189 / 64%) 115%
+    #faf0e6 24%,
+    rgb(250 240 230 / 92%) 42%,
+    rgb(217 183 189 / 30%) 68%,
+    rgb(217 183 189 / 62%) 100%
   );
   transform: translateX(-50%);
+}
+
+.hero::after {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(
+    102deg,
+    transparent 16%,
+    rgb(250 240 230 / 4%) 34%,
+    rgb(217 183 189 / 8%) 52%,
+    rgb(217 183 189 / 18%) 72%,
+    rgb(116 59 77 / 14%) 100%
+  );
+  transform: translateX(-50%);
+}
+
+.hero-copy,
+.hero .portrait {
+  position: relative;
+  z-index: 1;
 }
 
 .hero .portrait {
   height: 520px;
   margin: -28px -28px -28px 0;
-  isolation: isolate;
-  background: transparent;
-  box-shadow: none;
-  overflow: visible;
+  background: var(--surface-gray);
+  box-shadow: 0 28px 70px -50px rgb(23 27 32 / 52%);
+  overflow: hidden;
 }
 
 .hero .portrait::before {
@@ -52,24 +77,10 @@ header {
 }
 
 .hero .profile-photo {
-  position: relative;
-  z-index: 0;
   object-position: center 43%;
-  filter: saturate(1.03) contrast(1.025);
-  -webkit-mask-image: radial-gradient(
-    ellipse 62% 55% at 53% 52%,
-    #000 48%,
-    rgb(0 0 0 / 92%) 62%,
-    rgb(0 0 0 / 48%) 82%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(
-    ellipse 62% 55% at 53% 52%,
-    #000 48%,
-    rgb(0 0 0 / 92%) 62%,
-    rgb(0 0 0 / 48%) 82%,
-    transparent 100%
-  );
+  filter: none;
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 .hero .portrait::after {
@@ -85,9 +96,19 @@ header {
     background: linear-gradient(
       180deg,
       #faf0e6 0%,
-      #faf0e6 50%,
-      rgb(217 183 189 / 34%) 82%,
-      rgb(217 183 189 / 52%) 115%
+      #faf0e6 38%,
+      rgb(217 183 189 / 24%) 68%,
+      rgb(217 183 189 / 54%) 100%
+    );
+  }
+
+  .hero::after {
+    background: linear-gradient(
+      180deg,
+      transparent 18%,
+      rgb(217 183 189 / 6%) 42%,
+      rgb(217 183 189 / 16%) 68%,
+      rgb(116 59 77 / 12%) 100%
     );
   }
 
@@ -96,20 +117,6 @@ header {
     margin: -10px 0 -20px;
   }
 
-  .hero .profile-photo {
-    -webkit-mask-image: radial-gradient(
-      ellipse 68% 60% at 50% 52%,
-      #000 50%,
-      rgb(0 0 0 / 64%) 80%,
-      transparent 100%
-    );
-    mask-image: radial-gradient(
-      ellipse 68% 60% at 50% 52%,
-      #000 50%,
-      rgb(0 0 0 / 64%) 80%,
-      transparent 100%
-    );
-  }
 }
 
 @media (prefers-contrast: more) {
@@ -117,6 +124,7 @@ header {
     background: var(--ivory);
   }
 
+  .hero::after,
   .hero .portrait::after {
     display: none;
   }
