@@ -27,73 +27,88 @@ header {
   left: 50%;
   width: 100vw;
   content: "";
-  background:
-    radial-gradient(
-      ellipse 48% 82% at 76% 48%,
-      rgb(217 183 189 / 42%) 0%,
-      rgb(217 183 189 / 18%) 43%,
-      rgb(217 183 189 / 0%) 76%
-    ),
-    linear-gradient(
-      100deg,
-      #faf0e6 0%,
-      #faf0e6 38%,
-      rgb(217 183 189 / 16%) 70%,
-      rgb(217 183 189 / 34%) 100%
-    );
+  background: linear-gradient(
+    94deg,
+    #faf0e6 0%,
+    #faf0e6 38%,
+    rgb(250 240 230 / 88%) 52%,
+    rgb(217 183 189 / 42%) 78%,
+    rgb(217 183 189 / 64%) 115%
+  );
   transform: translateX(-50%);
 }
 
 .hero .portrait {
+  height: 520px;
+  margin: -28px -28px -28px 0;
   isolation: isolate;
   background: transparent;
-  box-shadow: 0 30px 80px -48px rgb(23 27 32 / 58%);
+  box-shadow: none;
+  overflow: visible;
 }
 
 .hero .portrait::before {
-  z-index: 2;
-  border-color: rgb(116 59 77 / 30%);
+  display: none;
 }
 
 .hero .profile-photo {
+  position: relative;
+  z-index: 0;
   object-position: center 43%;
+  filter: saturate(1.03) contrast(1.025);
+  -webkit-mask-image: radial-gradient(
+    ellipse 62% 55% at 53% 52%,
+    #000 48%,
+    rgb(0 0 0 / 92%) 62%,
+    rgb(0 0 0 / 48%) 82%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 62% 55% at 53% 52%,
+    #000 48%,
+    rgb(0 0 0 / 92%) 62%,
+    rgb(0 0 0 / 48%) 82%,
+    transparent 100%
+  );
 }
 
 .hero .portrait::after {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  content: "";
-  pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      rgb(250 240 230 / 34%) 0%,
-      rgb(250 240 230 / 10%) 28%,
-      transparent 55%
-    ),
-    radial-gradient(
-      ellipse 78% 70% at 78% 58%,
-      rgb(217 183 189 / 28%) 0%,
-      rgb(217 183 189 / 8%) 58%,
-      transparent 82%
-    );
+  display: none;
 }
 
 .hero .portrait figcaption {
-  z-index: 3;
+  display: none;
 }
 
 @media (max-width: 900px) {
   .hero::before {
-    background:
-      radial-gradient(
-        ellipse 88% 52% at 62% 78%,
-        rgb(217 183 189 / 38%) 0%,
-        rgb(217 183 189 / 14%) 54%,
-        rgb(217 183 189 / 0%) 82%
-      ),
-      linear-gradient(180deg, #faf0e6 0%, #faf0e6 52%, rgb(217 183 189 / 28%) 100%);
+    background: linear-gradient(
+      180deg,
+      #faf0e6 0%,
+      #faf0e6 50%,
+      rgb(217 183 189 / 34%) 82%,
+      rgb(217 183 189 / 52%) 115%
+    );
+  }
+
+  .hero .portrait {
+    height: min(620px, 112vw);
+    margin: -10px 0 -20px;
+  }
+
+  .hero .profile-photo {
+    -webkit-mask-image: radial-gradient(
+      ellipse 68% 60% at 50% 52%,
+      #000 50%,
+      rgb(0 0 0 / 64%) 80%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 68% 60% at 50% 52%,
+      #000 50%,
+      rgb(0 0 0 / 64%) 80%,
+      transparent 100%
+    );
   }
 }
 
