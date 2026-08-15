@@ -20,10 +20,10 @@ export default function Home() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className="profile-photo hero-profile-photo"
-          src="/ana-livia-hero.jpg"
-          srcSet="/ana-livia-hero-480.jpg 480w, /ana-livia-hero.jpg 960w"
+          src="/ana-livia-cover.jpg"
+          srcSet="/ana-livia-cover-480.jpg 480w, /ana-livia-cover.jpg 960w"
           sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) calc(100vw - 48px), 420px"
-          alt="Ana Lívia sorrindo, apoiada sobre livros"
+          alt="Ana Lívia em um retrato com blazer claro e iluminação suave"
           width="960"
           height="1280"
           fetchPriority="high"

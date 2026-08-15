@@ -1,28 +1,17 @@
 :root {
+  /* Apenas o creme principal muda; as demais cores continuam as anteriores. */
   --paper: #faf0e6;
-  --surface-gray: color-mix(in srgb, #c78b96 16%, #faf0e6);
-  --ink: #2e2e2e;
-  --wine: #6e4b4b;
-  --plum: #6e4b4b;
-  --cream: #faf0e6;
-  --rose: #c78b96;
-  --charcoal: #2e2e2e;
-  --dark: #2e2e2e;
-  --muted: #6e4b4b;
   --ivory: #faf0e6;
-  --line: rgb(110 75 75 / 24%);
 }
 
-html,
 body,
 #conteudo,
 .skip {
-  background-color: var(--cream);
+  background-color: var(--ivory);
 }
 
 header {
   background: rgb(250 240 230 / 92%);
-  border-bottom-color: rgb(110 75 75 / 18%);
 }
 
 .hero {
@@ -41,93 +30,58 @@ header {
   background:
     radial-gradient(
       ellipse 48% 82% at 76% 48%,
-      rgb(199 139 150 / 40%) 0%,
-      rgb(199 139 150 / 18%) 43%,
-      rgb(199 139 150 / 0%) 76%
+      rgb(217 183 189 / 42%) 0%,
+      rgb(217 183 189 / 18%) 43%,
+      rgb(217 183 189 / 0%) 76%
     ),
     linear-gradient(
       100deg,
       #faf0e6 0%,
       #faf0e6 38%,
-      rgb(199 139 150 / 15%) 70%,
-      rgb(199 139 150 / 34%) 100%
+      rgb(217 183 189 / 16%) 70%,
+      rgb(217 183 189 / 34%) 100%
     );
   transform: translateX(-50%);
 }
 
 .hero .portrait {
-  background: rgb(250 240 230 / 32%);
-  box-shadow: 0 30px 80px -48px rgb(46 46 46 / 58%);
+  isolation: isolate;
+  background: transparent;
+  box-shadow: 0 30px 80px -48px rgb(23 27 32 / 58%);
 }
 
 .hero .portrait::before {
-  border-color: rgb(110 75 75 / 38%);
+  z-index: 2;
+  border-color: rgb(116 59 77 / 30%);
 }
 
-.professional-id,
-.notice,
-.study-list span:nth-child(3n + 1) {
-  background: var(--rose);
-  border-color: var(--rose);
+.hero .profile-photo {
+  object-position: center 43%;
 }
 
-.page-hero,
-.info,
-.step,
-.post,
-.audience-card.teen,
-.values-band,
-.therapy-process,
-.practice-grid article,
-.anchor-bar,
-.audience-card.guardian,
-.personal-section,
-.study-list span {
-  background: color-mix(in srgb, var(--rose) 16%, var(--cream));
+.hero .portrait::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(250 240 230 / 34%) 0%,
+      rgb(250 240 230 / 10%) 28%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 78% 70% at 78% 58%,
+      rgb(217 183 189 / 28%) 0%,
+      rgb(217 183 189 / 8%) 58%,
+      transparent 82%
+    );
 }
 
-.card.wine,
-.cta,
-.contract-band,
-.about-details {
-  background: var(--wine);
-  border-color: var(--wine);
-}
-
-.dark,
-.presence-band,
-.online-band,
-footer,
-.portrait figcaption,
-.about-photo-real figcaption {
-  background: var(--charcoal);
-}
-
-.card.plum {
-  background: var(--rose);
-}
-
-.button,
-.nav-button {
-  border-color: var(--wine);
-}
-
-.button {
-  background: var(--wine);
-}
-
-.button.light {
-  background: var(--cream);
-  border-color: var(--cream);
-  color: var(--wine);
-}
-
-.button.outline {
-  color: var(--wine);
-}
-
-.story-quote {
-  border-left-color: var(--rose);
+.hero .portrait figcaption {
+  z-index: 3;
 }
 
 @media (max-width: 900px) {
@@ -135,16 +89,20 @@ footer,
     background:
       radial-gradient(
         ellipse 88% 52% at 62% 78%,
-        rgb(199 139 150 / 36%) 0%,
-        rgb(199 139 150 / 14%) 54%,
-        rgb(199 139 150 / 0%) 82%
+        rgb(217 183 189 / 38%) 0%,
+        rgb(217 183 189 / 14%) 54%,
+        rgb(217 183 189 / 0%) 82%
       ),
-      linear-gradient(180deg, #faf0e6 0%, #faf0e6 52%, rgb(199 139 150 / 28%) 100%);
+      linear-gradient(180deg, #faf0e6 0%, #faf0e6 52%, rgb(217 183 189 / 28%) 100%);
   }
 }
 
 @media (prefers-contrast: more) {
   .hero::before {
-    background: var(--cream);
+    background: var(--ivory);
+  }
+
+  .hero .portrait::after {
+    display: none;
   }
 }
