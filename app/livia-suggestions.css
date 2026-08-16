@@ -290,6 +290,8 @@ header {
   .editorial-hero .profile-photo {
     object-fit: cover;
     object-position: right center;
+    transform: scale(1.24);
+    transform-origin: right center;
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 14%, black 100%);
     mask-image: linear-gradient(90deg, transparent 0%, black 14%, black 100%);
   }
