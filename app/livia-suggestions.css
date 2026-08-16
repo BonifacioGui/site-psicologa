@@ -185,8 +185,8 @@ header {
 @media (max-width: 560px) {
   .editorial-hero {
     display: block;
-    min-height: 860px;
-    padding: 48px 0 42px;
+    min-height: 760px;
+    padding: 38px 0 36px;
     overflow: hidden;
   }
 
@@ -213,44 +213,47 @@ header {
   }
 
   .editorial-hero .professional-name {
-    max-width: 76%;
-    font-size: clamp(43px, 13vw, 50px);
-    line-height: 0.98;
+    max-width: 82%;
+    font-size: clamp(36px, 10.8vw, 42px);
+    line-height: 1;
   }
 
   .editorial-hero .professional-id {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .editorial-hero .hero-service {
-    max-width: 70%;
-    font-size: 23px;
-    line-height: 1.22;
+    max-width: 64%;
+    margin-top: 24px;
+    font-size: 19px;
+    line-height: 1.25;
   }
 
   .editorial-hero .approach-label {
-    max-width: 65%;
-    font-size: 10px;
+    max-width: 60%;
+    font-size: 9px;
     line-height: 1.5;
   }
 
   .editorial-hero .hero-emotional {
-    max-width: 61%;
-    font-size: 19px;
-    line-height: 1.4;
+    max-width: 58%;
+    font-size: 16px;
+    line-height: 1.45;
   }
 
   .editorial-hero .actions {
     position: relative;
     z-index: 2;
-    width: max(60%, 210px);
-    gap: 16px;
+    width: max(58%, 196px);
+    margin-top: 28px;
+    gap: 12px;
   }
 
   .editorial-hero .actions .button {
     width: 100%;
     justify-content: center;
-    padding-inline: 10px;
+    padding: 11px 8px;
+    font-size: 10px;
     text-align: center;
   }
 
@@ -260,8 +263,8 @@ header {
     top: 180px;
     right: calc((100% - 100vw) / 2);
     bottom: auto;
-    width: 78vw;
-    height: clamp(520px, 155vw, 650px);
+    width: 70vw;
+    height: clamp(470px, 140vw, 560px);
     aspect-ratio: auto;
     margin: 0;
     overflow: hidden;
@@ -277,20 +280,20 @@ header {
 
   .editorial-hero .profile-photo {
     object-fit: cover;
-    object-position: 73% center;
+    object-position: 70% center;
     -webkit-mask-image: linear-gradient(
       90deg,
-      transparent 0 20%,
-      rgb(0 0 0 / 10%) 32%,
-      rgb(0 0 0 / 74%) 48%,
-      black 60%
+      transparent 0 24%,
+      rgb(0 0 0 / 10%) 36%,
+      rgb(0 0 0 / 74%) 50%,
+      black 62%
     );
     mask-image: linear-gradient(
       90deg,
-      transparent 0 20%,
-      rgb(0 0 0 / 10%) 32%,
-      rgb(0 0 0 / 74%) 48%,
-      black 60%
+      transparent 0 24%,
+      rgb(0 0 0 / 10%) 36%,
+      rgb(0 0 0 / 74%) 50%,
+      black 62%
     );
   }
 }
