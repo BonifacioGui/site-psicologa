@@ -3,10 +3,20 @@ import { PageHero } from "../components/PageHero";
 
 export const metadata: Metadata = {
   title: "Perguntas frequentes",
-  description: "Dúvidas sobre primeira sessão, duração, atendimento online, sigilo, adolescentes, horários e valores.",
+  description: "Dúvidas sobre como funciona a terapia, primeira sessão, duração, atendimento online, sigilo, adolescentes, horários e valores.",
 };
 
 const faq = [
+  {
+    question: "Nunca fiz terapia, como funciona?",
+    answer: [
+      "Você não precisa chegar sabendo exatamente o que dizer, nem ter tudo organizado na cabeça. Muitas vezes, começamos justamente pelo que está confuso.",
+      "Nas primeiras sessões, o psicólogo procura conhecer melhor você, sua história, o que tem acontecido e o que fez você buscar ajuda naquele momento. Aos poucos, vocês vão identificando dificuldades, padrões, emoções e situações que merecem mais atenção.",
+      "Durante o processo, você pode falar sobre pensamentos, sentimentos, relações, acontecimentos do dia a dia, medos, inseguranças ou qualquer questão que esteja sendo importante para você. O papel do psicólogo não é julgar, dar broncas ou simplesmente dizer o que você deve fazer, mas ajudar você a compreender melhor o que está vivendo e encontrar formas mais saudáveis de lidar com isso.",
+      "A terapia também não precisa começar por uma grande crise. Você pode buscar acompanhamento porque está se sentindo sobrecarregado, quer se conhecer melhor, deseja mudar alguns padrões ou simplesmente sente que algumas coisas poderiam estar mais leves.",
+      "E não se preocupe se houver silêncio, nervosismo ou dificuldade para falar no começo. Isso também faz parte. O vínculo e a confiança são construídos aos poucos, no seu ritmo.",
+    ],
+  },
   {
     question: "Como funciona a primeira sessão?",
     answer: [
@@ -54,7 +64,7 @@ const faq = [
 
 export default function Page() {
   return <main>
-    <PageHero eyebrow="Perguntas frequentes" title="Informação também faz parte do cuidado." intro="Seis respostas diretas sobre o início da terapia, duração, atendimento online, adolescentes, sigilo, horários e valores." />
+    <PageHero eyebrow="Perguntas frequentes" title="Informação também faz parte do cuidado." intro="Sete respostas diretas sobre como a terapia funciona, primeira sessão, duração, atendimento online, adolescentes, sigilo, horários e valores." />
     <section className="content narrow shell faq faq-expanded">
       {faq.map(({ question, answer }, index) => <details key={question} open={index === 0}>
         <summary>{question}</summary>
