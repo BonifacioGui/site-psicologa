@@ -25,7 +25,7 @@ const faq = [
   {
     question: "O atendimento é online?",
     answer: [
-      "Sim. As sessões são realizadas por videochamada pelo Google Meet. Para preservar a privacidade e a qualidade da conversa, participe de um ambiente reservado e, se possível, utilize fones de ouvido e uma conexão estável.",
+      "Sim. As sessões são realizadas por videochamada pelo Google Meet ou Microsoft Teams. Para preservar a privacidade e a qualidade da conversa, participe de um ambiente reservado e, se possível, utilize fones de ouvido e uma conexão estável.",
       "O link e as orientações práticas são informados antes do encontro.",
     ],
   },

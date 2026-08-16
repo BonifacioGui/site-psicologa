@@ -27,7 +27,7 @@ export default function Page() {
           <b>{professionalContact.instagramDisplay}</b>
           <small>Perfil provisório — o endereço definitivo será inserido posteriormente</small>
         </div>
-        <p>Profissional sediada em {professionalContact.locationDisplay}.<br />Horários mediante disponibilidade e agendamento prévio.<br />Atendimentos online pelo Google Meet, com duração aproximada de 45 minutos.</p>
+        <p>Profissional sediada em {professionalContact.locationDisplay}.<br />Horários mediante disponibilidade e agendamento prévio.<br />Atendimentos online pelo Google Meet ou Microsoft Teams, com duração aproximada de 45 minutos.</p>
       </div>
       <aside>
         <div className="notice"><strong>Proteja sua privacidade</strong><p>Não envie laudos, documentos, histórico médico, diagnóstico ou relatos detalhados. Estes canais são apenas para dúvidas e agendamento.</p></div>
