@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { professionalContact } from "./site";
 
 export default function Home() {
@@ -59,16 +58,16 @@ export default function Home() {
 
     <section id="atendimentos" className="shell section anchor-target">
       <p className="eyebrow">Atendimentos</p>
-      <div className="section-title"><h2>Questões diferentes pedem conversas diferentes.</h2><Link className="text-link" href="/atendimento">Como funciona →</Link></div>
+      <div className="section-title"><h2>Questões diferentes pedem conversas diferentes.</h2><a className="text-link" href="/atendimento">Como funciona →</a></div>
       <div className="cards">
-        <Link className="card wine" href="/adolescentes"><span>Adolescentes e responsáveis</span><h3>Ansiedade, escola, identidade, relações e mudanças dessa fase.</h3><p>Informações específicas para quem vai fazer terapia e para quem acompanha e contrata o atendimento.</p><b aria-hidden="true">↗</b></Link>
-        <Link className="card plum" href="/jovens-adultos"><span>Jovens adultos</span><h3>Escolhas, carreira, autonomia, vínculos e autocobrança.</h3><p>Um trabalho focado em compreender dificuldades atuais e desenvolver recursos para decisões e transições.</p><b aria-hidden="true">↗</b></Link>
+        <a className="card wine" href="/adolescentes"><span>Adolescentes e responsáveis</span><h3>Ansiedade, escola, identidade, relações e mudanças dessa fase.</h3><p>Informações específicas para quem vai fazer terapia e para quem acompanha e contrata o atendimento.</p><b aria-hidden="true">↗</b></a>
+        <a className="card plum" href="/jovens-adultos"><span>Jovens adultos</span><h3>Escolhas, carreira, autonomia, vínculos e autocobrança.</h3><p>Um trabalho focado em compreender dificuldades atuais e desenvolver recursos para decisões e transições.</p><b aria-hidden="true">↗</b></a>
       </div>
     </section>
 
-    <section className="dark"><div className="shell split"><div><p className="eyebrow pale">Abordagem</p><h2>Por que Terapia Cognitivo-Comportamental?</h2></div><div><p>A TCC oferece uma forma clara de relacionar pensamentos, emoções e comportamentos. Gosto de uma abordagem em que paciente e terapeuta entendem o que estão trabalhando, definem prioridades juntos e acompanham mudanças de maneira concreta.</p><Link className="button light" href="/abordagem-tcc">Conhecer a TCC</Link></div></div></section>
+    <section className="dark"><div className="shell split"><div><p className="eyebrow pale">Abordagem</p><h2>Por que Terapia Cognitivo-Comportamental?</h2></div><div><p>A TCC oferece uma forma clara de relacionar pensamentos, emoções e comportamentos. Gosto de uma abordagem em que paciente e terapeuta entendem o que estão trabalhando, definem prioridades juntos e acompanham mudanças de maneira concreta.</p><a className="button light" href="/abordagem-tcc">Conhecer a TCC</a></div></div></section>
 
-    <section className="shell quote"><p className="index">03 — Sobre mim</p><div><blockquote>Psicologia, formação contínua e interesse genuíno pelas experiências de adolescentes e jovens adultos.</blockquote><p>Conheça minha trajetória, por que escolhi a clínica, os temas que estudo e um pouco de quem existe fora do consultório.</p><Link className="text-link" href="/sobre">Conheça a profissional →</Link></div></section>
+    <section className="shell quote"><p className="index">03 — Sobre mim</p><div><blockquote>Psicologia, formação contínua e interesse genuíno pelas experiências de adolescentes e jovens adultos.</blockquote><p>Conheça minha trajetória, por que escolhi a clínica, os temas que estudo e um pouco de quem existe fora do consultório.</p><a className="text-link" href="/sobre">Conheça a profissional →</a></div></section>
 
     <section className="cta"><p className="eyebrow pale">Contato inicial</p><h2>Quer saber sobre horários e valores?</h2><p>Envie uma mensagem breve. Não é necessário relatar questões clínicas pelo WhatsApp.</p><a className="button light" href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">Conversar pelo WhatsApp</a></section>
   </main>;

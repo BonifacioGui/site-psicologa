@@ -685,9 +685,13 @@ summary:focus-visible {
 }
 
 .personal-grid {
-  grid-template-columns: minmax(120px, 0.55fr) minmax(280px, 1.05fr) minmax(0, 1.4fr);
+  grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.25fr);
   gap: clamp(36px, 4.5vw, 64px);
   align-items: start;
+}
+
+.personal-aside .index {
+  margin: 0 0 22px;
 }
 
 .personal-photo {

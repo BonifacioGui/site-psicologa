@@ -1,5 +1,6 @@
+/* Full-page navigation avoids the vinext RSC link interception failure in the hosted build. */
+/* eslint-disable @next/next/no-html-link-for-pages */
 import type { Metadata } from "next";
-import Link from "next/link";
 import { professionalContact, siteUrl } from "./site";
 import "@fontsource/dm-serif-display/400.css";
 import "@fontsource/manrope/400.css";
@@ -49,15 +50,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return <html lang="pt-BR"><body>
     <a className="skip" href="#conteudo">Pular para o conteúdo</a>
     <header><div className="shell nav">
-      <Link className="brand" href="/"><small>Psicóloga</small>Ana Lívia</Link>
-      <nav aria-label="Navegação principal">{links.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</nav>
-      <Link className="nav-button" href="/contato">Contato</Link>
+      <a className="brand" href="/"><small>Psicóloga</small>Ana Lívia</a>
+      <nav aria-label="Navegação principal">{links.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</nav>
+      <a className="nav-button" href="/contato">Contato</a>
       <details className="mobile-menu">
         <summary aria-label="Menu de navegação"><span className="mobile-menu-label">Menu</span><span className="mobile-menu-icon" aria-hidden="true" /></summary>
-        <nav className="mobile-menu-panel" aria-label="Navegação móvel">{mobileLinks.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</nav>
+        <nav className="mobile-menu-panel" aria-label="Navegação móvel">{mobileLinks.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</nav>
       </details>
     </div></header>
     <div id="conteudo">{children}</div>
-    <footer><div className="shell foot"><div><Link className="brand" href="/"><small>Psicóloga</small>Ana Lívia</Link><p>Ana Lívia Calado da Costa<br />CRP 02/34611 · Atendimento online<br />{professionalContact.locationDisplay}</p></div><div><strong>Navegue</strong><Link href="/sobre">Sobre</Link><Link href="/atendimento">Atendimento</Link><Link href="/conteudos">Conteúdos</Link></div><div><strong>Contato</strong><Link href="/faq">Perguntas frequentes</Link><a href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">WhatsApp</a><a href={`mailto:${professionalContact.email}`}>E-mail</a><span>Instagram: {professionalContact.instagramDisplay}</span><Link href="/politica-de-privacidade">Privacidade</Link></div><div><strong>Importante</strong><p>Este site não oferece atendimento de urgência. Em risco imediato, ligue 192 ou 188 (CVV).</p></div></div><div className="shell copy">© 2026 Ana Lívia Calado da Costa · Conteúdo informativo; não substitui avaliação profissional.</div></footer>
+    <footer><div className="shell foot"><div><a className="brand" href="/"><small>Psicóloga</small>Ana Lívia</a><p>Ana Lívia Calado da Costa<br />CRP 02/34611 · Atendimento online<br />{professionalContact.locationDisplay}</p></div><div><strong>Navegue</strong><a href="/sobre">Sobre</a><a href="/atendimento">Atendimento</a><a href="/conteudos">Conteúdos</a></div><div><strong>Contato</strong><a href="/faq">Perguntas frequentes</a><a href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">WhatsApp</a><a href={`mailto:${professionalContact.email}`}>E-mail</a><span>Instagram: {professionalContact.instagramDisplay}</span><a href="/politica-de-privacidade">Privacidade</a></div><div><strong>Importante</strong><p>Este site não oferece atendimento de urgência. Em risco imediato, ligue 192 ou 188 (CVV).</p></div></div><div className="shell copy">© 2026 Ana Lívia Calado da Costa · Conteúdo informativo; não substitui avaliação profissional.</div></footer>
   </body></html>;
 }
