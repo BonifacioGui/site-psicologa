@@ -22,7 +22,7 @@ export default function Home() {
             className="profile-photo hero-profile-photo"
             src="/ana-livia-hero-arch-transparent.png"
             srcSet="/ana-livia-hero-arch-transparent-512.png 512w, /ana-livia-hero-arch-transparent.png 1055w"
-            sizes="(max-width: 560px) min(calc(100vw - 30px), 330px), (max-width: 900px) 420px, 500px"
+            sizes="(max-width: 560px) min(100vw, 360px), (max-width: 900px) 420px, 500px"
             alt="Ana Lívia em retrato profissional com blazer claro"
             width="1055"
             height="1491"
