@@ -483,6 +483,140 @@ summary:focus-visible {
   outline-color: var(--rose);
 }
 
+/* Ritmo espacial consistente entre títulos, textos, ações e colunas. */
+.section-title {
+  gap: clamp(28px, 4vw, 56px);
+}
+
+.section-title .text-link {
+  flex: 0 0 auto;
+}
+
+.actions {
+  column-gap: 32px;
+  row-gap: 16px;
+}
+
+.button {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.cards,
+.posts {
+  gap: clamp(24px, 2.5vw, 32px);
+}
+
+.audience-paths {
+  gap: clamp(26px, 3vw, 36px);
+}
+
+.process-steps {
+  gap: clamp(26px, 2.5vw, 34px);
+}
+
+.practice-grid {
+  gap: 24px;
+}
+
+.contact {
+  column-gap: clamp(64px, 7vw, 96px);
+}
+
+.contact-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.page-hero .eyebrow,
+.cta > .eyebrow,
+.split > div > .eyebrow,
+.study-grid > div > .eyebrow,
+.about-story > .eyebrow {
+  margin-bottom: 18px;
+}
+
+.page-hero h1 {
+  margin-bottom: clamp(26px, 2.6vw, 36px);
+}
+
+.page-hero h1 + p {
+  margin-top: 0;
+}
+
+.intro h2,
+.prose > section > h2,
+.prose > h2,
+.about-story h2,
+.session-summary h2,
+.study-grid h2,
+.personal-grid h2,
+.audience-card h2,
+.faq-callout h2,
+.cta h2 {
+  margin-bottom: clamp(24px, 2.2vw, 32px);
+}
+
+:is(
+  .intro h2,
+  .prose > section > h2,
+  .prose > h2,
+  .about-story h2,
+  .session-summary h2,
+  .study-grid h2,
+  .personal-grid h2,
+  .audience-card h2,
+  .faq-callout h2,
+  .cta h2
+) + p {
+  margin-top: 0;
+}
+
+.card h3 {
+  margin-bottom: 24px;
+}
+
+.post h2,
+.process-step h3 {
+  margin-bottom: 20px;
+}
+
+.audience-card h3 {
+  margin-bottom: 18px;
+}
+
+.dark .split > div:last-child > .button {
+  margin-top: 22px;
+}
+
+.cta > p:not(.eyebrow) {
+  margin: 0 auto 30px;
+}
+
+.prose > p:has(> .button),
+.faq-callout > div:last-child > p:has(> .button) {
+  margin-top: 34px;
+  margin-bottom: 0;
+}
+
+.personal-grid .actions {
+  margin-top: 44px;
+}
+
+.notice strong + p {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.contact-link b {
+  margin-top: 8px;
+}
+
+.contact-link small {
+  display: block;
+  margin-top: 6px;
+}
+
 @keyframes compact-navigation {
   from {
     height: 82px;
@@ -546,6 +680,19 @@ summary:focus-visible {
     grid-template-columns: 1fr;
     gap: 36px;
   }
+
+  .section-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .contact,
+  .about-grid,
+  .study-grid,
+  .personal-grid {
+    row-gap: 52px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -599,5 +746,18 @@ summary:focus-visible {
 
   .process-step {
     min-height: 220px;
+  }
+
+  .cards,
+  .posts,
+  .process-steps,
+  .practice-grid,
+  .audience-paths {
+    gap: 24px;
+  }
+
+  .button {
+    padding-right: 22px;
+    padding-left: 22px;
   }
 }
