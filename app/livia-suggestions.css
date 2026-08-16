@@ -3,6 +3,7 @@
   --paper: #faf0e6;
   --ivory: #faf0e6;
   --hero-blazer: #d9bbb3;
+  --header-rose: #d9b7bd;
 }
 
 body,
@@ -12,7 +13,7 @@ body,
 }
 
 header {
-  background: rgb(250 240 230 / 92%);
+  background: var(--header-rose);
 }
 
 .editorial-hero {
@@ -155,9 +156,9 @@ header {
     right: auto;
     bottom: auto;
     display: block;
-    width: min(100%, 540px);
+    width: min(100%, 640px);
     height: auto;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1600 / 1131;
     margin: 0 auto;
     background: transparent;
     box-shadow: none;
@@ -174,8 +175,8 @@ header {
   }
 
   .editorial-hero .profile-photo {
-    object-fit: cover;
-    object-position: center 48%;
+    object-fit: contain;
+    object-position: center;
     filter: none;
     -webkit-mask-image: none;
     mask-image: none;

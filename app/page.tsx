@@ -18,19 +18,14 @@ export default function Home() {
       </div>
       <figure className="portrait">
         <picture>
-          <source
-            media="(min-width: 901px)"
-            srcSet="/ana-livia-hero-landscape-v2-960.jpg 960w, /ana-livia-hero-landscape-v2.png 1600w"
-            sizes="min(68vw, 930px)"
-          />
           <img
             className="profile-photo hero-profile-photo"
-            src="/ana-livia-hero-mobile-gradient-960.jpg"
-            srcSet="/ana-livia-hero-mobile-gradient-480.jpg 480w, /ana-livia-hero-mobile-gradient-960.jpg 960w, /ana-livia-hero-mobile-gradient.png 1122w"
-            sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) min(calc(100vw - 48px), 540px), min(68vw, 930px)"
+            src="/ana-livia-hero-landscape-v2-960.jpg"
+            srcSet="/ana-livia-hero-landscape-v2-960.jpg 960w, /ana-livia-hero-landscape-v2.png 1600w"
+            sizes="(max-width: 900px) min(calc(100vw - 30px), 640px), min(68vw, 930px)"
             alt="Ana Lívia em um retrato com blazer claro e iluminação suave"
-            width="1122"
-            height="1402"
+            width="1600"
+            height="1131"
             loading="eager"
             fetchPriority="high"
             decoding="async"
