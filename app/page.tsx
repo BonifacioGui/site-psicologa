@@ -18,6 +18,11 @@ export default function Home() {
       </div>
       <figure className="portrait">
         <picture>
+          <source
+            media="(max-width: 560px)"
+            srcSet="/ana-livia-mobile-reference.png"
+            sizes="42vw"
+          />
           <img
             className="profile-photo hero-profile-photo"
             src="/ana-livia-hero-landscape-v2-960.jpg"
