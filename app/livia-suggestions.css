@@ -3,7 +3,6 @@
   --paper: #faf0e6;
   --ivory: #faf0e6;
   --hero-blazer: #d9bbb3;
-  --header-rose: #d9b7bd;
 }
 
 body,
@@ -13,7 +12,7 @@ body,
 }
 
 header {
-  background: var(--header-rose);
+  background: rgb(250 240 230 / 92%);
 }
 
 .editorial-hero {
