@@ -5,7 +5,7 @@ export default function Home() {
   return <main>
     <section className="hero editorial-hero shell">
       <div className="hero-copy">
-        <p className="eyebrow">Atendimento psicológico online</p>
+        <p className="eyebrow">Atendimento psicológico online <span aria-hidden="true">·</span> {professionalContact.locationDisplay}</p>
         <h1 className="professional-name">Ana Lívia Calado da Costa</h1>
         <p className="professional-id">Psicóloga <span aria-hidden="true">·</span> CRP 02/34611</p>
         <h2 className="hero-service">Psicoterapia online para adolescentes e jovens adultos.</h2>

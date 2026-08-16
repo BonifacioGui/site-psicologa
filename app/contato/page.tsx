@@ -4,7 +4,7 @@ import { professionalContact } from "../site";
 
 export const metadata: Metadata = {
   title: "Contato",
-  description: "Contato para informações e disponibilidade de atendimento psicológico online.",
+  description: "Contato para informações e disponibilidade de atendimento psicológico online com profissional sediada em Garanhuns, Pernambuco.",
 };
 
 export default function Page() {
@@ -22,7 +22,12 @@ export default function Page() {
           <b>{professionalContact.email} →</b>
           <small>Para informações administrativas sobre o atendimento</small>
         </a>
-        <p>Horários mediante disponibilidade e agendamento prévio.<br />Atendimentos online pelo Google Meet, com duração aproximada de 45 minutos.</p>
+        <div className="contact-link">
+          <span className="eyebrow">Instagram profissional</span>
+          <b>{professionalContact.instagramDisplay}</b>
+          <small>Perfil provisório — o endereço definitivo será inserido posteriormente</small>
+        </div>
+        <p>Profissional sediada em {professionalContact.locationDisplay}.<br />Horários mediante disponibilidade e agendamento prévio.<br />Atendimentos online pelo Google Meet, com duração aproximada de 45 minutos.</p>
       </div>
       <aside>
         <div className="notice"><strong>Proteja sua privacidade</strong><p>Não envie laudos, documentos, histórico médico, diagnóstico ou relatos detalhados. Estes canais são apenas para dúvidas e agendamento.</p></div>

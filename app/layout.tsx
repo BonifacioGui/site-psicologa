@@ -16,15 +16,15 @@ import "./livia-suggestions.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: "Ana Lívia Calado da Costa | Psicóloga", template: "%s | Ana Lívia Calado da Costa" },
-  description: "Atendimento psicológico online para adolescentes e jovens adultos pela Terapia Cognitivo-Comportamental.",
-  keywords: ["psicóloga online", "terapia para adolescentes", "TCC"],
+  description: "Atendimento psicológico online para adolescentes e jovens adultos com psicóloga sediada em Garanhuns, Pernambuco, pela Terapia Cognitivo-Comportamental.",
+  keywords: ["psicóloga online", "psicóloga em Garanhuns", "psicóloga Garanhuns PE", "terapia para adolescentes", "TCC"],
   openGraph: {
     type: "website",
     locale: "pt_BR",
     url: siteUrl,
     siteName: "Ana Lívia Calado da Costa | Psicóloga",
     title: "Ana Lívia Calado da Costa | Psicóloga",
-    description: "Psicoterapia online para adolescentes e jovens adultos.",
+    description: "Psicoterapia online para adolescentes e jovens adultos com profissional sediada em Garanhuns, Pernambuco.",
     images: [{
       url: `${siteUrl}/og.png`,
       width: 1200,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ana Lívia Calado da Costa | Psicóloga",
-    description: "Psicoterapia online para adolescentes e jovens adultos.",
+    description: "Psicoterapia online para adolescentes e jovens adultos com profissional sediada em Garanhuns, Pernambuco.",
     images: [`${siteUrl}/og.png`],
   },
   robots: { index: true, follow: true },
@@ -58,6 +58,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </details>
     </div></header>
     <div id="conteudo">{children}</div>
-    <footer><div className="shell foot"><div><Link className="brand" href="/"><small>Psicóloga</small>Ana Lívia</Link><p>Ana Lívia Calado da Costa<br />CRP 02/34611 · Atendimento online</p></div><div><strong>Navegue</strong><Link href="/sobre">Sobre</Link><Link href="/atendimento">Atendimento</Link><Link href="/conteudos">Conteúdos</Link></div><div><strong>Contato</strong><Link href="/faq">Perguntas frequentes</Link><a href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">WhatsApp</a><a href={`mailto:${professionalContact.email}`}>E-mail</a><Link href="/politica-de-privacidade">Privacidade</Link></div><div><strong>Importante</strong><p>Este site não oferece atendimento de urgência. Em risco imediato, ligue 192 ou 188 (CVV).</p></div></div><div className="shell copy">© 2026 Ana Lívia Calado da Costa · Conteúdo informativo; não substitui avaliação profissional.</div></footer>
+    <footer><div className="shell foot"><div><Link className="brand" href="/"><small>Psicóloga</small>Ana Lívia</Link><p>Ana Lívia Calado da Costa<br />CRP 02/34611 · Atendimento online<br />{professionalContact.locationDisplay}</p></div><div><strong>Navegue</strong><Link href="/sobre">Sobre</Link><Link href="/atendimento">Atendimento</Link><Link href="/conteudos">Conteúdos</Link></div><div><strong>Contato</strong><Link href="/faq">Perguntas frequentes</Link><a href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">WhatsApp</a><a href={`mailto:${professionalContact.email}`}>E-mail</a><span>Instagram: {professionalContact.instagramDisplay}</span><Link href="/politica-de-privacidade">Privacidade</Link></div><div><strong>Importante</strong><p>Este site não oferece atendimento de urgência. Em risco imediato, ligue 192 ou 188 (CVV).</p></div></div><div className="shell copy">© 2026 Ana Lívia Calado da Costa · Conteúdo informativo; não substitui avaliação profissional.</div></footer>
   </body></html>;
 }
