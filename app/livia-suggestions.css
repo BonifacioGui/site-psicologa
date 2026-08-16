@@ -2,6 +2,7 @@
   /* Somente o creme principal muda; as demais cores permanecem as anteriores. */
   --paper: #faf0e6;
   --ivory: #faf0e6;
+  --hero-blazer: #c77c7d;
 }
 
 body,
@@ -34,9 +35,10 @@ header {
   background-image: linear-gradient(
     90deg,
     #faf0e6 0%,
-    #f7e3da 48%,
-    #ebc9bf 74%,
-    #d7aaa4 100%
+    #faf0e6 38%,
+    #f2d8d1 55%,
+    #dfa9a4 73%,
+    var(--hero-blazer) 100%
   );
   transform: translateX(-50%);
 }
@@ -50,7 +52,15 @@ header {
   width: 100vw;
   content: "";
   pointer-events: none;
-  display: none;
+  display: block;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 43%,
+    rgb(199 124 125 / 72%) 56%,
+    rgb(199 124 125 / 28%) 66%,
+    transparent 78%
+  );
   transform: translateX(-50%);
 }
 
@@ -76,7 +86,7 @@ header {
   right: calc((100% - 100vw) / 2);
   bottom: 0;
   display: block;
-  width: min(75vw, 950px);
+  width: min(55vw, 720px);
   height: 100%;
   margin: 0;
   padding: 0;
@@ -103,21 +113,21 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 42%;
+  object-position: center 52%;
   filter: none;
   -webkit-mask-image: linear-gradient(
     90deg,
     transparent 0%,
-    rgb(0 0 0 / 12%) 8%,
-    rgb(0 0 0 / 68%) 23%,
-    black 36%
+    rgb(0 0 0 / 8%) 14%,
+    rgb(0 0 0 / 52%) 28%,
+    black 42%
   );
   mask-image: linear-gradient(
     90deg,
     transparent 0%,
-    rgb(0 0 0 / 12%) 8%,
-    rgb(0 0 0 / 68%) 23%,
-    black 36%
+    rgb(0 0 0 / 8%) 14%,
+    rgb(0 0 0 / 52%) 28%,
+    black 42%
   );
 }
 
@@ -153,9 +163,10 @@ header {
     right: auto;
     bottom: auto;
     display: block;
-    width: 100%;
-    height: min(128vw, 620px);
-    margin: 0;
+    width: min(100%, 540px);
+    height: auto;
+    aspect-ratio: 4 / 5;
+    margin: 0 auto;
     background: transparent;
     box-shadow: none;
     overflow: hidden;
@@ -172,7 +183,7 @@ header {
 
   .editorial-hero .profile-photo {
     object-fit: cover;
-    object-position: center 43%;
+    object-position: center 48%;
     filter: none;
     -webkit-mask-image: none;
     mask-image: none;
@@ -185,9 +196,6 @@ header {
     gap: 34px;
   }
 
-  .editorial-hero .portrait {
-    height: 122vw;
-  }
 }
 
 @media (prefers-contrast: more) {

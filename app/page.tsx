@@ -21,13 +21,13 @@ export default function Home() {
           <source
             media="(min-width: 901px)"
             srcSet="/ana-livia-hero-v2-960.jpg 960w, /ana-livia-hero-v2.png 2611w"
-            sizes="min(75vw, 950px)"
+            sizes="min(55vw, 720px)"
           />
           <img
             className="profile-photo hero-profile-photo"
             src="/ana-livia-hero-v2-960.jpg"
             srcSet="/ana-livia-hero-v2-480.jpg 480w, /ana-livia-hero-v2-960.jpg 960w, /ana-livia-hero-v2.png 2611w"
-            sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) calc(100vw - 48px), 1200px"
+            sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) min(calc(100vw - 48px), 540px), min(55vw, 720px)"
             alt="Ana Lívia em um retrato com blazer claro e iluminação suave"
             width="2611"
             height="3480"
