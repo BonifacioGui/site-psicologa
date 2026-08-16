@@ -5,7 +5,7 @@ import { professionalContact } from "../site";
 
 export const metadata: Metadata = {
   title: "Sobre mim",
-  description: "Conheça a história, os interesses profissionais e a forma de trabalho de Ana Lívia Calado da Costa.",
+  description: "Conheça a formação, a experiência clínica em TCC, o interesse por Neurociências e a trajetória de Ana Lívia Calado da Costa.",
 };
 
 export default function Page() {
@@ -28,7 +28,14 @@ export default function Page() {
         <figcaption>Ana Lívia Calado da Costa<br /><span>Psicóloga · CRP 02/34611</span></figcaption>
       </figure>
       <div className="prose about-story">
-        <p className="eyebrow">Minha trajetória</p>
+        <p className="eyebrow">Formação e prática clínica</p>
+        <h2>Uma prática construída entre clínica, ciência e desenvolvimento contínuo.</h2>
+        <p>Sou psicóloga, formada pela UNINASSAU, com experiência clínica em Terapia Cognitivo-Comportamental (TCC) e atuação voltada especialmente para adolescentes, jovens adultos e adultos.</p>
+        <p>Durante minha formação, tive experiência direta no atendimento clínico de adolescentes e jovens, acompanhando demandas como ansiedade, insegurança, baixa autoestima, autocobrança, dificuldades nos relacionamentos, adaptação a mudanças e regulação emocional. Essa vivência reforçou meu interesse por compreender os desafios próprios dessa fase da vida e por ajudar cada pessoa a desenvolver formas mais saudáveis de lidar com eles.</p>
+        <p>Minha prática é orientada principalmente pela Terapia Cognitivo-Comportamental, uma abordagem baseada em evidências científicas que busca compreender a relação entre pensamentos, emoções e comportamentos. Também mantenho estudos complementares em temas relacionados à regulação emocional, mindfulness e abordagens contemporâneas da TCC.</p>
+        <p>Além da experiência clínica, ao longo da graduação participei de atividades voltadas à Psicologia, saúde mental e desenvolvimento de crianças e adolescentes, incluindo ações psicoeducativas em contexto escolar.</p>
+        <p>Outra área importante da minha trajetória foi o estudo da relação entre Psicologia e Neurociências. Meu Trabalho de Conclusão de Curso foi desenvolvido sobre o uso do neurofeedback como recurso psicológico no tratamento de transtornos mentais, incluindo revisão científica e visita técnica a um instituto especializado em neurofeedback e avaliação por EEG. Essa experiência ampliou meu interesse pela integração entre saúde mental, funcionamento cerebral e práticas baseadas em evidências.</p>
+        <p className="eyebrow story-section-label">Minha trajetória</p>
         <h2>O que existe por trás do que mostramos ao mundo.</h2>
         <p>Escolhi a clínica porque, desde muito nova, sempre me interessou aquilo que existe por trás do que as pessoas mostram ao mundo. Mas existe também uma razão muito pessoal para eu me identificar tanto com o trabalho com adolescentes e jovens adultos.</p>
         <p>Durante a minha própria adolescência, houve momentos em que eu também precisei da ajuda de um profissional que pudesse me ajudar a compreender o que eu estava vivendo. Hoje penso no quanto ter tido esse suporte poderia ter tornado alguns momentos menos difíceis.</p>
