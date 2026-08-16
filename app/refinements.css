@@ -576,10 +576,6 @@ summary:focus-visible {
   margin-top: 18px;
 }
 
-.about-story > .story-section-label {
-  margin-top: 72px;
-}
-
 .page-hero h1 {
   margin-bottom: clamp(26px, 2.6vw, 36px);
 }
@@ -822,7 +818,4 @@ summary:focus-visible {
     margin-bottom: 20px;
   }
 
-  .about-story > .story-section-label {
-    margin-top: 56px;
-  }
 }

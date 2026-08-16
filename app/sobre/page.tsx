@@ -5,12 +5,12 @@ import { professionalContact } from "../site";
 
 export const metadata: Metadata = {
   title: "Sobre mim",
-  description: "Conheça a formação, a experiência clínica em TCC, o interesse por Neurociências e a trajetória de Ana Lívia Calado da Costa.",
+  description: "Conheça a formação, a experiência clínica em TCC, o interesse por Neurociências e a atuação profissional de Ana Lívia Calado da Costa.",
 };
 
 export default function Page() {
   return <main>
-    <PageHero eyebrow="Sobre mim" title="Conhecimento técnico, ética e humanidade." intro="Minha história ajuda a explicar por que escolhi a clínica e por que trabalho com tanto cuidado com adolescentes e jovens adultos." />
+    <PageHero eyebrow="Sobre mim" title="Conhecimento técnico, ética e humanidade." intro="Minha formação, experiência clínica e interesse pela ciência orientam uma prática voltada ao cuidado de adolescentes, jovens adultos e adultos." />
     <section className="content shell about-grid">
       <figure className="about-photo-real">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -35,15 +35,6 @@ export default function Page() {
         <p>Minha prática é orientada principalmente pela Terapia Cognitivo-Comportamental, uma abordagem baseada em evidências científicas que busca compreender a relação entre pensamentos, emoções e comportamentos. Também mantenho estudos complementares em temas relacionados à regulação emocional, mindfulness e abordagens contemporâneas da TCC.</p>
         <p>Além da experiência clínica, ao longo da graduação participei de atividades voltadas à Psicologia, saúde mental e desenvolvimento de crianças e adolescentes, incluindo ações psicoeducativas em contexto escolar.</p>
         <p>Outra área importante da minha trajetória foi o estudo da relação entre Psicologia e Neurociências. Meu Trabalho de Conclusão de Curso foi desenvolvido sobre o uso do neurofeedback como recurso psicológico no tratamento de transtornos mentais, incluindo revisão científica e visita técnica a um instituto especializado em neurofeedback e avaliação por EEG. Essa experiência ampliou meu interesse pela integração entre saúde mental, funcionamento cerebral e práticas baseadas em evidências.</p>
-        <p className="eyebrow story-section-label">Minha trajetória</p>
-        <h2>O que existe por trás do que mostramos ao mundo.</h2>
-        <p>Escolhi a clínica porque, desde muito nova, sempre me interessou aquilo que existe por trás do que as pessoas mostram ao mundo. Mas existe também uma razão muito pessoal para eu me identificar tanto com o trabalho com adolescentes e jovens adultos.</p>
-        <p>Durante a minha própria adolescência, houve momentos em que eu também precisei da ajuda de um profissional que pudesse me ajudar a compreender o que eu estava vivendo. Hoje penso no quanto ter tido esse suporte poderia ter tornado alguns momentos menos difíceis.</p>
-        <blockquote className="story-quote">Talvez por isso eu enxergue essa fase da vida com tanto cuidado.</blockquote>
-        <h2>Uma fase em que muita coisa começa a ganhar força.</h2>
-        <p>A adolescência e o início da vida adulta são períodos de construção contínua. É quando muitas crenças sobre quem somos, sobre o nosso valor, sobre os outros e sobre o mundo começam a ganhar força.</p>
-        <p>Inseguranças, experiências de rejeição, cobranças, comparações e medos podem parecer passageiros, mas algumas dessas experiências podem acompanhar a pessoa por muitos anos.</p>
-        <p>Conforme a vida adulta chega, chegam também novas responsabilidades, decisões, relacionamentos, trabalho, faculdade, expectativas e frustrações. Aquilo que antes parecia apenas uma insegurança pode se tornar um padrão cada vez mais enraizado e interferir de forma significativa na maneira como a pessoa vive, sente e se relaciona.</p>
       </div>
     </section>
     <section className="presence-band"><div className="shell presence-copy"><p className="eyebrow pale">É nesse processo que quero estar presente</p><h2>Não para impedir todo sofrimento, mas para que você não precise atravessar sozinho aquilo que ainda não consegue compreender.</h2></div></section>
