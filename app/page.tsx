@@ -36,8 +36,25 @@ export default function Home() {
     </section>
 
     <section className="shell intro">
-      <p className="index">01 — Como trabalho</p>
-      <div><h2>Uma sessão com direção, sem respostas prontas.</h2><p className="lead">Nas sessões, investigamos situações concretas: o que aconteceu, quais pensamentos apareceram, como isso afetou suas emoções e o que você fez em seguida. A partir daí, definimos objetivos, observamos padrões e construímos estratégias que possam ser usadas fora da terapia.</p></div>
+      <p className="index">01 — Como funciona</p>
+      <div className="therapy-intro-copy">
+        <h2>Nunca fiz terapia, como funciona?</h2>
+        <p className="lead">Você não precisa chegar sabendo exatamente o que dizer, nem ter tudo organizado na cabeça. Muitas vezes, começamos justamente pelo que está confuso.</p>
+        <p className="lead">Nas primeiras sessões, o psicólogo procura conhecer melhor você, sua história, o que tem acontecido e o que fez você buscar ajuda naquele momento. Aos poucos, vocês vão identificando dificuldades, padrões, emoções e situações que merecem mais atenção.</p>
+        <p className="lead">Durante o processo, você pode falar sobre pensamentos, sentimentos, relações, acontecimentos do dia a dia, medos, inseguranças ou qualquer questão que esteja sendo importante para você. O papel do psicólogo não é julgar, dar broncas ou simplesmente dizer o que você deve fazer, mas ajudar você a compreender melhor o que está vivendo e encontrar formas mais saudáveis de lidar com isso.</p>
+        <p className="lead">A terapia também não precisa começar por uma grande crise. Você pode buscar acompanhamento porque está se sentindo sobrecarregado, quer se conhecer melhor, deseja mudar alguns padrões ou simplesmente sente que algumas coisas poderiam estar mais leves.</p>
+        <p className="lead">E não se preocupe se houver silêncio, nervosismo ou dificuldade para falar no começo. Isso também faz parte. O vínculo e a confiança são construídos aos poucos, no seu ritmo.</p>
+      </div>
+    </section>
+
+    <section className="audience-reason">
+      <div className="shell audience-reason-grid">
+        <p className="index">02 — Para quem atendo</p>
+        <div>
+          <h2>Por que adolescentes e jovens adultos?</h2>
+          <p className="lead">Tenho uma identificação especial com o atendimento de adolescentes e jovens adultos porque essa é uma fase marcada por muitas construções: identidade, autoestima, relações, escolhas, expectativas sobre o futuro e formas de enxergar a si mesmo e o mundo. Ao longo desses acompanhamentos, pude contribuir para que aspectos que antes pareciam difíceis de compreender ou manejar se tornassem mais claros e possíveis de enfrentar. É também um período em que determinadas crenças e padrões de comportamento começam a ganhar força. Quando não são percebidos e trabalhados, alguns deles podem acompanhar a pessoa até a vida adulta, tornando-se mais rígidos ou até virando transtornos diante de novas responsabilidades, relacionamentos e desafios.</p>
+        </div>
+      </div>
     </section>
 
     <section id="atendimentos" className="shell section anchor-target">
@@ -51,7 +68,7 @@ export default function Home() {
 
     <section className="dark"><div className="shell split"><div><p className="eyebrow pale">Abordagem</p><h2>Por que Terapia Cognitivo-Comportamental?</h2></div><div><p>A TCC oferece uma forma clara de relacionar pensamentos, emoções e comportamentos. Gosto de uma abordagem em que paciente e terapeuta entendem o que estão trabalhando, definem prioridades juntos e acompanham mudanças de maneira concreta.</p><Link className="button light" href="/abordagem-tcc">Conhecer a TCC</Link></div></div></section>
 
-    <section className="shell quote"><p className="index">02 — Sobre mim</p><div><blockquote>Psicologia, formação contínua e interesse genuíno pelas experiências de adolescentes e jovens adultos.</blockquote><p>Conheça minha trajetória, por que escolhi a clínica, os temas que estudo e um pouco de quem existe fora do consultório.</p><Link className="text-link" href="/sobre">Conheça a profissional →</Link></div></section>
+    <section className="shell quote"><p className="index">03 — Sobre mim</p><div><blockquote>Psicologia, formação contínua e interesse genuíno pelas experiências de adolescentes e jovens adultos.</blockquote><p>Conheça minha trajetória, por que escolhi a clínica, os temas que estudo e um pouco de quem existe fora do consultório.</p><Link className="text-link" href="/sobre">Conheça a profissional →</Link></div></section>
 
     <section className="cta"><p className="eyebrow pale">Contato inicial</p><h2>Quer saber sobre horários e valores?</h2><p>Envie uma mensagem breve. Não é necessário relatar questões clínicas pelo WhatsApp.</p><a className="button light" href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">Conversar pelo WhatsApp</a></section>
   </main>;
