@@ -30,11 +30,28 @@ export default function Page() {
       <div className="prose about-story">
         <p className="eyebrow">Formação e prática clínica</p>
         <h2>Uma prática construída entre clínica, ciência e desenvolvimento contínuo.</h2>
-        <p>Sou psicóloga, formada pela UNINASSAU, com experiência clínica em Terapia Cognitivo-Comportamental (TCC) e atuação voltada especialmente para adolescentes, jovens adultos e adultos.</p>
-        <p>Durante minha formação, tive experiência direta no atendimento clínico de adolescentes e jovens, acompanhando demandas como ansiedade, insegurança, baixa autoestima, autocobrança, dificuldades nos relacionamentos, adaptação a mudanças e regulação emocional. Essa vivência reforçou meu interesse por compreender os desafios próprios dessa fase da vida e por ajudar cada pessoa a desenvolver formas mais saudáveis de lidar com eles.</p>
-        <p>Minha prática é orientada principalmente pela Terapia Cognitivo-Comportamental, uma abordagem baseada em evidências científicas que busca compreender a relação entre pensamentos, emoções e comportamentos. Também mantenho estudos complementares em temas relacionados à regulação emocional, mindfulness e abordagens contemporâneas da TCC.</p>
-        <p>Além da experiência clínica, ao longo da graduação participei de atividades voltadas à Psicologia, saúde mental e desenvolvimento de crianças e adolescentes, incluindo ações psicoeducativas em contexto escolar.</p>
-        <p>Outra área importante da minha trajetória foi o estudo da relação entre Psicologia e Neurociências. Meu Trabalho de Conclusão de Curso foi desenvolvido sobre o uso do neurofeedback como recurso psicológico no tratamento de transtornos mentais, incluindo revisão científica e visita técnica a um instituto especializado em neurofeedback e avaliação por EEG. Essa experiência ampliou meu interesse pela integração entre saúde mental, funcionamento cerebral e práticas baseadas em evidências.</p>
+        <div className="about-professional-topics">
+          <section className="about-professional-topic">
+            <div className="about-topic-heading"><span className="index">01</span><h3>Formação em Psicologia</h3></div>
+            <p>Sou psicóloga, <strong>formada pela UNINASSAU</strong>, com experiência clínica em Terapia Cognitivo-Comportamental (TCC) e atuação voltada especialmente para adolescentes, jovens adultos e adultos.</p>
+          </section>
+          <section className="about-professional-topic">
+            <div className="about-topic-heading"><span className="index">02</span><h3>Experiência clínica</h3></div>
+            <p>Durante minha formação, tive <strong>experiência direta no atendimento clínico de adolescentes e jovens</strong>, acompanhando demandas como ansiedade, insegurança, baixa autoestima, autocobrança, dificuldades nos relacionamentos, adaptação a mudanças e regulação emocional. Essa vivência reforçou meu interesse por compreender os desafios próprios dessa fase da vida e por ajudar cada pessoa a desenvolver formas mais saudáveis de lidar com eles.</p>
+          </section>
+          <section className="about-professional-topic">
+            <div className="about-topic-heading"><span className="index">03</span><h3>TCC e estudos contínuos</h3></div>
+            <p>Minha prática é orientada principalmente pela Terapia Cognitivo-Comportamental, uma <strong>abordagem baseada em evidências científicas</strong> que busca compreender a relação entre pensamentos, emoções e comportamentos. Também mantenho estudos complementares em temas relacionados à regulação emocional, mindfulness e abordagens contemporâneas da TCC.</p>
+          </section>
+          <section className="about-professional-topic">
+            <div className="about-topic-heading"><span className="index">04</span><h3>Ações psicoeducativas</h3></div>
+            <p>Além da experiência clínica, ao longo da graduação participei de atividades voltadas à Psicologia, saúde mental e desenvolvimento de crianças e adolescentes, incluindo <strong>ações psicoeducativas em contexto escolar</strong>.</p>
+          </section>
+          <section className="about-professional-topic">
+            <div className="about-topic-heading"><span className="index">05</span><h3>Psicologia e Neurociências</h3></div>
+            <p>Outra área importante da minha trajetória foi o estudo da relação entre <strong>Psicologia e Neurociências</strong>. Meu Trabalho de Conclusão de Curso foi desenvolvido sobre o uso do <strong>neurofeedback</strong> como recurso psicológico no tratamento de transtornos mentais, incluindo revisão científica e visita técnica a um instituto especializado em neurofeedback e <strong>avaliação por EEG</strong>. Essa experiência ampliou meu interesse pela integração entre saúde mental, funcionamento cerebral e práticas baseadas em evidências.</p>
+          </section>
+        </div>
       </div>
     </section>
     <section className="presence-band"><div className="shell presence-copy"><p className="eyebrow pale">É nesse processo que quero estar presente</p><h2>Não para impedir todo sofrimento, mas para que você não precise atravessar sozinho aquilo que ainda não consegue compreender.</h2></div></section>
