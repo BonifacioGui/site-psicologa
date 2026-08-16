@@ -691,19 +691,20 @@ summary:focus-visible {
 }
 
 .personal-aside {
-  display: flex;
+  position: relative;
   min-width: 0;
-  flex-direction: column;
 }
 
 .personal-aside .index {
-  margin: 0 0 22px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
 }
 
 .personal-photo {
-  position: relative;
-  flex: 1;
-  min-height: 0;
+  position: absolute;
+  inset: 42px 0 0;
   margin: 0;
   overflow: hidden;
   background: var(--rose);
@@ -830,9 +831,21 @@ summary:focus-visible {
   }
 
   .personal-photo {
+    position: relative;
+    inset: auto;
     width: min(100%, 520px);
     aspect-ratio: 3 / 4;
-    flex: none;
+  }
+
+  .personal-aside {
+    display: flex;
+    position: static;
+    flex-direction: column;
+  }
+
+  .personal-aside .index {
+    position: static;
+    margin-bottom: 22px;
   }
 
   .audience-reason-grid {
