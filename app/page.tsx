@@ -20,12 +20,12 @@ export default function Home() {
         <picture>
           <img
             className="profile-photo hero-profile-photo"
-            src="/ana-livia-hero-arch-1132.png"
-            srcSet="/ana-livia-hero-arch-566.png 566w, /ana-livia-hero-arch-1132.png 1132w"
+            src="/ana-livia-hero-arch-transparent.png"
+            srcSet="/ana-livia-hero-arch-transparent-512.png 512w, /ana-livia-hero-arch-transparent.png 1055w"
             sizes="(max-width: 560px) 45vw, (max-width: 900px) 420px, 440px"
             alt="Ana Lívia em retrato profissional com blazer claro"
-            width="1132"
-            height="1600"
+            width="1055"
+            height="1491"
             loading="eager"
             fetchPriority="high"
             decoding="async"
