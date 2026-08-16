@@ -684,6 +684,31 @@ summary:focus-visible {
   margin-top: 44px;
 }
 
+.personal-grid {
+  grid-template-columns: minmax(120px, 0.55fr) minmax(280px, 1.05fr) minmax(0, 1.4fr);
+  gap: clamp(36px, 4.5vw, 64px);
+  align-items: start;
+}
+
+.personal-photo {
+  aspect-ratio: 3 / 4;
+  margin: 0;
+  overflow: hidden;
+  background: var(--rose);
+}
+
+.personal-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.personal-copy h2 {
+  max-width: 620px;
+}
+
 .notice strong + p {
   margin-top: 12px;
   margin-bottom: 0;
@@ -773,6 +798,14 @@ summary:focus-visible {
   .study-grid,
   .personal-grid {
     row-gap: 52px;
+  }
+
+  .personal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .personal-photo {
+    width: min(100%, 520px);
   }
 
   .audience-reason-grid {
@@ -874,6 +907,10 @@ summary:focus-visible {
 
   .about-professional-topic > p {
     padding-left: 42px;
+  }
+
+  .personal-photo {
+    width: 100%;
   }
 
 }
