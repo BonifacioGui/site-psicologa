@@ -192,59 +192,64 @@ header {
   }
 
   .editorial-hero .eyebrow {
-    font-size: 7px;
+    font-size: 8px;
     line-height: 1.45;
     letter-spacing: 0.13em;
   }
 
   .editorial-hero .professional-name {
     max-width: 100%;
-    margin-bottom: 8px;
-    font-size: clamp(21px, 6.1vw, 24px);
-    line-height: 1.02;
+    margin-bottom: 10px;
+    font-size: clamp(40px, 12.5vw, 47px);
+    line-height: 0.98;
   }
 
   .editorial-hero .professional-id {
-    padding: 4px 7px;
-    font-size: 8px;
+    padding: 5px 9px;
+    font-size: 9px;
     line-height: 1.35;
     white-space: nowrap;
   }
 
   .editorial-hero .hero-service {
     max-width: 100%;
-    margin: 26px 0 11px;
-    font-size: 15px;
-    line-height: 1.3;
+    margin: 30px 0 12px;
+    font-size: clamp(22px, 6.4vw, 24px);
+    line-height: 1.22;
   }
 
   .editorial-hero .approach-label {
     max-width: 100%;
-    margin-bottom: 17px;
-    font-size: 7px;
+    margin-bottom: 20px;
+    font-size: 10px;
     line-height: 1.45;
     letter-spacing: 0.11em;
   }
 
   .editorial-hero .hero-emotional {
     max-width: 100%;
-    font-size: 13px;
-    line-height: 1.42;
+    font-size: 18px;
+    line-height: 1.4;
   }
 
   .editorial-hero .actions {
-    width: 100%;
-    margin-top: 28px;
+    width: auto;
+    margin-top: 30px;
     gap: 12px;
   }
 
   .editorial-hero .actions .button {
-    width: 100%;
+    width: auto;
+    min-width: 178px;
     justify-content: center;
-    padding: 11px 6px;
-    font-size: 8px;
+    padding: 13px 20px;
+    font-size: 10px;
     line-height: 1.35;
     text-align: center;
+  }
+
+  .editorial-hero .actions .button:first-child {
+    min-width: 198px;
   }
 
   .editorial-hero .portrait {
