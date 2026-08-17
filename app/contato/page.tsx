@@ -22,11 +22,11 @@ export default function Page() {
           <b>{professionalContact.email} →</b>
           <small>Para informações administrativas sobre o atendimento</small>
         </a>
-        <div className="contact-link">
+        <a className="contact-link" href={professionalContact.instagramHref} target="_blank" rel="noreferrer">
           <span className="eyebrow">Instagram profissional</span>
-          <b>{professionalContact.instagramDisplay}</b>
-          <small>Perfil provisório — o endereço definitivo será inserido posteriormente</small>
-        </div>
+          <b>{professionalContact.instagramDisplay} →</b>
+          <small>Acompanhe o perfil profissional no Instagram</small>
+        </a>
         <p>Profissional sediada em {professionalContact.locationDisplay}.<br />Horários mediante disponibilidade e agendamento prévio.<br />Atendimentos online pelo Google Meet ou Microsoft Teams, com duração aproximada de 45 minutos.</p>
       </div>
       <aside>
