@@ -17,7 +17,7 @@ export default function Page() {
           <b>{professionalContact.whatsappDisplay} →</b>
           <small>Mensagem inicial neutra para informações e agendamento</small>
         </a>
-        <a className="contact-link" href={`mailto:${professionalContact.email}`}>
+        <a className="contact-link" href={professionalContact.gmailHref} target="_blank" rel="noreferrer">
           <span className="eyebrow">E-mail profissional</span>
           <b>{professionalContact.email} →</b>
           <small>Para informações administrativas sobre o atendimento</small>
