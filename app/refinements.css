@@ -241,6 +241,11 @@ footer,
   color: var(--ink);
 }
 
+/* O cabeçalho das páginas internas usa o mesmo rosé dos destaques. */
+.page-hero {
+  background: var(--rose);
+}
+
 :is(.page-hero, .info, .step, .post, .audience-card.teen, .values-band) :is(h1, h2, h3, p, li, a, span, strong) {
   color: var(--ink);
 }
