@@ -414,38 +414,15 @@ footer,
 
 .about-preview-photo {
   grid-area: photo;
-  position: relative;
-  isolation: isolate;
-  width: min(100%, 420px);
-  aspect-ratio: 9 / 10;
-  margin: 0;
-  overflow: hidden;
-  background: linear-gradient(150deg, var(--surface-gray) 0%, var(--rose) 100%);
-  border: 1px solid rgb(116 59 77 / 30%);
-  border-radius: 48% 48% 18px 18px;
-  box-shadow: 18px 20px 0 -11px var(--rose);
-}
-
-.about-preview-photo::after {
-  position: absolute;
-  z-index: 2;
-  inset: 14px;
-  border: 1px solid rgb(247 243 238 / 72%);
-  border-radius: inherit;
-  content: "";
-  pointer-events: none;
+  width: min(100%, 430px);
+  margin: clamp(-76px, -5.2vw, -52px) 0 0;
 }
 
 .about-preview-photo img {
-  position: absolute;
-  z-index: 1;
-  bottom: 8px;
-  left: 50%;
   display: block;
-  width: 108%;
-  max-width: none;
+  width: 100%;
   height: auto;
-  transform: translateX(-50%);
+  mix-blend-mode: multiply;
 }
 
 .faq-expanded details[open] {
@@ -995,7 +972,7 @@ summary:focus-visible {
 
   .about-preview-photo {
     width: min(100%, 520px);
-    margin-inline: auto;
+    margin: 0 auto;
   }
 
   .personal-photo {
