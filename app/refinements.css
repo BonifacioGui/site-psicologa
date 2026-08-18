@@ -295,6 +295,24 @@ footer,
   background: var(--surface-gray);
 }
 
+.about-photo-real {
+  isolation: isolate;
+  padding: 12px;
+  border: 1px solid rgb(116 59 77 / 34%);
+  border-radius: 84px 14px 84px 14px;
+  box-shadow:
+    18px 20px 0 -12px var(--rose),
+    0 22px 48px rgb(37 33 36 / 12%);
+}
+
+.about-photo-real .profile-photo {
+  border-radius: 72px 6px 0 0;
+}
+
+.about-photo-real figcaption {
+  border-radius: 0 0 72px 6px;
+}
+
 .portrait::before {
   border-color: rgb(116 59 77 / 34%);
 }
@@ -1109,6 +1127,22 @@ summary:focus-visible {
 
   .about-professional-topic > p {
     padding-left: 42px;
+  }
+
+  .about-photo-real {
+    padding: 8px;
+    border-radius: 64px 12px 64px 12px;
+    box-shadow:
+      12px 14px 0 -8px var(--rose),
+      0 16px 34px rgb(37 33 36 / 11%);
+  }
+
+  .about-photo-real .profile-photo {
+    border-radius: 56px 5px 0 0;
+  }
+
+  .about-photo-real figcaption {
+    border-radius: 0 0 56px 5px;
   }
 
   .personal-photo {
