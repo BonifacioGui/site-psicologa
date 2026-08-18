@@ -113,7 +113,7 @@ export default function Home() {
       <figure className="about-preview-photo">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/ana-livia-home-sobre-transparent.png"
+          src="/ana-livia-home-sobre-arco-v2.png"
           alt="Ana Lívia sentada em retrato profissional com blazer claro"
           width="1132"
           height="1600"
