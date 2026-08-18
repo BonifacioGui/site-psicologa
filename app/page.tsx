@@ -1,4 +1,5 @@
 import { professionalContact } from "./site";
+import { BrainCircuit, Flower2, Gauge, Heart, Signpost, UsersRound } from "lucide-react";
 
 export default function Home() {
   return <main>
@@ -32,6 +33,41 @@ export default function Home() {
         </picture>
         <figcaption>Ana Lívia Calado da Costa</figcaption>
       </figure>
+    </section>
+
+    <section className="focus-strip" aria-label="Temas de atendimento">
+      <ul className="shell focus-area-list">
+        <li className="focus-area-card">
+          <span className="focus-area-icon" aria-hidden="true"><BrainCircuit /></span>
+          <h3>Ansiedade</h3>
+          <p>Compreender e manejar a ansiedade para viver com mais calma e equilíbrio.</p>
+        </li>
+        <li className="focus-area-card">
+          <span className="focus-area-icon" aria-hidden="true"><Heart /></span>
+          <h3>Autoestima</h3>
+          <p>Fortalecer sua autoconfiança e se relacionar com mais respeito e gentileza.</p>
+        </li>
+        <li className="focus-area-card">
+          <span className="focus-area-icon" aria-hidden="true"><UsersRound /></span>
+          <h3>Relacionamentos</h3>
+          <p>Melhorar suas relações e aprender a se comunicar de forma mais saudável.</p>
+        </li>
+        <li className="focus-area-card">
+          <span className="focus-area-icon" aria-hidden="true"><Gauge /></span>
+          <h3>Autocobrança</h3>
+          <p>Reduzir a pressão interna e cuidar de si com mais leveza no dia a dia.</p>
+        </li>
+        <li className="focus-area-card">
+          <span className="focus-area-icon" aria-hidden="true"><Flower2 /></span>
+          <h3>Regulação emocional</h3>
+          <p>Identificar, acolher e lidar melhor com suas emoções no cotidiano.</p>
+        </li>
+        <li className="focus-area-card">
+          <span className="focus-area-icon" aria-hidden="true"><Signpost /></span>
+          <h3>Transições</h3>
+          <p>Apoio em mudanças, escolhas e novos começos.</p>
+        </li>
+      </ul>
     </section>
 
     <section className="shell intro">
