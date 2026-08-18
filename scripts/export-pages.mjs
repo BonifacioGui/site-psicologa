@@ -74,7 +74,7 @@ if (
   || !index.includes("CRP 02/34611")
   || !index.includes("Psicoterapia online para adolescentes")
   || !index.includes(`${basePath}/_next/`)
-  || !index.includes(`srcSet="${basePath}/ana-livia-hero-480.jpg 480w, ${basePath}/ana-livia-hero.jpg 960w"`)
+  || !index.includes(`srcSet="${basePath}/ana-livia-hero-arch-transparent-512.png 512w, ${basePath}/ana-livia-hero-arch-transparent.png 1055w"`)
   || !index.includes(`<meta property="og:image" content="${origin}/og.png"`)
 ) {
   throw new Error("A validação da exportação estática falhou.");
