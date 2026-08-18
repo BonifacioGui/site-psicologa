@@ -308,6 +308,49 @@ footer,
   color: var(--wine);
 }
 
+.about-preview {
+  grid-template-areas:
+    "index copy"
+    "photo copy";
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.4fr);
+  grid-template-rows: auto 1fr;
+  gap: 24px clamp(54px, 7vw, 100px);
+  align-items: start;
+  padding-block: 105px;
+}
+
+.about-preview > .index {
+  grid-area: index;
+  margin: 0;
+}
+
+.about-preview-copy {
+  grid-area: copy;
+  align-self: center;
+}
+
+.about-preview-copy blockquote {
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+.about-preview-copy > p {
+  max-width: 700px;
+  margin-bottom: 18px;
+}
+
+.about-preview-photo {
+  grid-area: photo;
+  width: min(100%, 410px);
+  margin: 0;
+}
+
+.about-preview-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .faq-expanded details[open] {
   background: linear-gradient(90deg, var(--rose) 0 5px, transparent 5px);
 }
@@ -833,6 +876,21 @@ summary:focus-visible {
 
   .personal-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-preview {
+    grid-template-areas:
+      "index"
+      "copy"
+      "photo";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 34px;
+  }
+
+  .about-preview-photo {
+    width: min(100%, 520px);
+    margin-inline: auto;
   }
 
   .personal-photo {

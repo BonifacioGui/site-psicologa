@@ -67,7 +67,25 @@ export default function Home() {
 
     <section className="dark"><div className="shell split"><div><p className="eyebrow pale">Abordagem</p><h2>Por que Terapia Cognitivo-Comportamental?</h2></div><div><p>A TCC oferece uma forma clara de relacionar pensamentos, emoções e comportamentos. Gosto de uma abordagem em que paciente e terapeuta entendem o que estão trabalhando, definem prioridades juntos e acompanham mudanças de maneira concreta.</p><a className="button light" href="/abordagem-tcc">Conhecer a TCC</a></div></div></section>
 
-    <section className="shell quote"><p className="index">03 — Sobre mim</p><div><blockquote>Psicologia, formação contínua e interesse genuíno pelas experiências de adolescentes e jovens adultos.</blockquote><p>Conheça minha trajetória, por que escolhi a clínica, os temas que estudo e um pouco de quem existe fora do consultório.</p><a className="text-link" href="/sobre">Conheça a profissional →</a></div></section>
+    <section className="shell quote about-preview">
+      <p className="index">03 — Sobre mim</p>
+      <div className="about-preview-copy">
+        <blockquote>uma formação marcada pela clínica, pelo aprimoramento profissional e baseada em evidências.</blockquote>
+        <p>Conheça minha trajetória, por que escolhi a clínica, os temas que estudo e um pouco de quem existe fora do consultório.</p>
+        <a className="text-link" href="/sobre">Conheça a profissional →</a>
+      </div>
+      <figure className="about-preview-photo">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/ana-livia-home-sobre-transparent.png"
+          alt="Ana Lívia sentada em retrato profissional com blazer claro"
+          width="1024"
+          height="1536"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+    </section>
 
     <section className="cta"><p className="eyebrow pale">Contato inicial</p><h2>Quer saber sobre horários e valores?</h2><p>Envie uma mensagem breve. Não é necessário relatar questões clínicas pelo WhatsApp.</p><a className="button light" href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">Conversar pelo WhatsApp</a></section>
   </main>;
