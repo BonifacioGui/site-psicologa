@@ -11,7 +11,8 @@ body,
 }
 
 header {
-  background: rgb(250 240 230 / 92%);
+  background: var(--rose);
+  border-bottom-color: rgb(37 33 36 / 18%);
 }
 
 .editorial-hero {
