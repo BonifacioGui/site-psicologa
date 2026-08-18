@@ -383,11 +383,11 @@ footer,
 
 .about-preview {
   grid-template-areas:
-    "index copy"
+    "index index"
     "photo copy";
   grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.4fr);
-  grid-template-rows: auto 1fr;
-  gap: 24px clamp(54px, 7vw, 100px);
+  grid-template-rows: auto auto;
+  gap: 42px clamp(54px, 7vw, 100px);
   align-items: start;
   padding-block: 105px;
 }
@@ -399,7 +399,7 @@ footer,
 
 .about-preview-copy {
   grid-area: copy;
-  align-self: center;
+  align-self: start;
 }
 
 .about-preview-copy blockquote {
@@ -414,14 +414,38 @@ footer,
 
 .about-preview-photo {
   grid-area: photo;
-  width: min(100%, 410px);
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 420px);
+  aspect-ratio: 9 / 10;
   margin: 0;
+  overflow: hidden;
+  background: linear-gradient(150deg, var(--surface-gray) 0%, var(--rose) 100%);
+  border: 1px solid rgb(116 59 77 / 30%);
+  border-radius: 48% 48% 18px 18px;
+  box-shadow: 18px 20px 0 -11px var(--rose);
+}
+
+.about-preview-photo::after {
+  position: absolute;
+  z-index: 2;
+  inset: 14px;
+  border: 1px solid rgb(247 243 238 / 72%);
+  border-radius: inherit;
+  content: "";
+  pointer-events: none;
 }
 
 .about-preview-photo img {
+  position: absolute;
+  z-index: 1;
+  bottom: 8px;
+  left: 50%;
   display: block;
-  width: 100%;
+  width: 108%;
+  max-width: none;
   height: auto;
+  transform: translateX(-50%);
 }
 
 .faq-expanded details[open] {
