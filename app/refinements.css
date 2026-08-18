@@ -433,14 +433,31 @@ footer,
 .about-preview-photo {
   grid-area: photo;
   width: min(100%, 430px);
-  margin: clamp(-76px, -5.2vw, -52px) 0 0;
+  aspect-ratio: 43 / 50;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
 }
 
 .about-preview-photo img {
+  position: absolute;
+  inset: 0 auto auto 0;
   display: block;
   width: 100%;
   height: auto;
-  mix-blend-mode: multiply;
+  transform: translateY(-12.5%);
+  filter: drop-shadow(0 14px 20px rgb(41 39 37 / 14%));
+}
+
+.about-preview-psi {
+  position: absolute;
+  left: 4.5%;
+  top: 44%;
+  z-index: 1;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 3vw, 42px);
+  line-height: 1;
 }
 
 .faq-expanded details[open] {

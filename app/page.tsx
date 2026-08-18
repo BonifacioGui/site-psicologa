@@ -120,6 +120,7 @@ export default function Home() {
           loading="lazy"
           decoding="async"
         />
+        <span className="about-preview-psi" aria-hidden="true">Ψ</span>
       </figure>
     </section>
 
