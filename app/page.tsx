@@ -115,8 +115,8 @@ export default function Home() {
         <img
           src="/ana-livia-home-sobre-transparent.png"
           alt="Ana Lívia sentada em retrato profissional com blazer claro"
-          width="1024"
-          height="1536"
+          width="1063"
+          height="1479"
           loading="lazy"
           decoding="async"
         />
