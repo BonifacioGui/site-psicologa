@@ -1,0 +1,63 @@
+export type FaqEntry = {
+  question: string;
+  answer: string[];
+  homeAnswer?: string;
+};
+
+export const faqEntries: FaqEntry[] = [
+  {
+    question: "Como funciona a primeira sessão?",
+    answer: [
+      "É um momento para compreender o que motivou a busca pela terapia, sua história, dificuldades e expectativas. Também acolhemos sua trajetória, esclarecemos dúvidas e conversamos sobre como será o processo.",
+      "Você não precisa chegar com tudo organizado ou saber exatamente por onde começar. Antes do acompanhamento, também recebe as informações e os combinados administrativos registrados em contrato ou termo.",
+    ],
+    homeAnswer: "É um momento para compreender o que motivou a busca pela terapia, conhecer sua história, acolher suas dificuldades e expectativas e esclarecer dúvidas sobre o processo. Você não precisa chegar com tudo organizado ou saber exatamente por onde começar.",
+  },
+  {
+    question: "Qual a duração das sessões e do tratamento?",
+    answer: [
+      "Cada sessão dura aproximadamente 45 minutos e acontece em horário definido conforme disponibilidade e agendamento prévio.",
+      "Não existe um tempo único ou previamente determinado para o tratamento. Cada processo acontece de forma individual, considerando as demandas apresentadas, os objetivos estabelecidos, a frequência das sessões e a evolução ao longo do acompanhamento.",
+      "Ao longo da terapia, avaliamos juntos o progresso e a necessidade de continuidade, redução da frequência das sessões ou preparação para a alta.",
+    ],
+    homeAnswer: "Cada sessão dura aproximadamente 45 minutos e acontece em horário definido conforme disponibilidade e agendamento prévio.",
+  },
+  {
+    question: "O atendimento é online?",
+    answer: [
+      "Sim. As sessões são realizadas por videochamada pelo Google Meet ou Microsoft Teams. Para preservar a privacidade e a qualidade da conversa, participe de um ambiente reservado e, se possível, utilize fones de ouvido e uma conexão estável.",
+      "O link e as orientações práticas são informados antes do encontro.",
+    ],
+  },
+  {
+    question: "Como funciona para adolescentes?",
+    answer: [
+      "Há uma conversa inicial com responsáveis e combinados claros sobre participação e sigilo. Responsáveis colaboram com informações, autorização e condições para o atendimento, mas o adolescente precisa de privacidade para construir confiança no processo.",
+      "O conteúdo detalhado das sessões não é repassado. Os limites do sigilo e as situações que exigem proteção são explicados desde o início.",
+    ],
+  },
+  {
+    question: "Como funciona o sigilo?",
+    answer: [
+      "O sigilo profissional é um dos princípios fundamentais da Psicologia. Tudo o que você compartilha durante as sessões é tratado com privacidade, ética e responsabilidade, conforme as normas que orientam a atuação profissional.",
+      "Existem apenas situações excepcionais previstas pelas normas profissionais e pela legislação, especialmente quando é necessário proteger você ou terceiros diante de uma situação de risco. Mesmo nesses casos, a necessidade e os limites dessa comunicação são informados a você.",
+    ],
+    homeAnswer: "Tudo o que você compartilha durante as sessões é tratado com privacidade, ética e responsabilidade. Há apenas situações excepcionais previstas pelas normas profissionais e pela legislação, especialmente quando é necessário proteger você ou terceiros diante de uma situação de risco.",
+  },
+  {
+    question: "Como saber horários e valores?",
+    answer: [
+      "Os horários disponíveis e o valor da sessão são informados no contato inicial, em espaço reservado e conforme disponibilidade para agendamento.",
+      "A orientação profissional é que o preço não seja utilizado como forma de propaganda. Antes do acompanhamento, o contrato ou termo registra pagamento, horários, atrasos, cancelamentos, remarcações e responsabilidades de ambas as partes.",
+    ],
+  },
+];
+
+export const homeFaqEntries = [
+  faqEntries[0],
+  faqEntries[4],
+  {
+    ...faqEntries[1],
+    question: "Qual a duração das sessões?",
+  },
+];

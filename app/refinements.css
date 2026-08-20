@@ -464,6 +464,66 @@ footer,
   background: linear-gradient(90deg, var(--rose) 0 5px, transparent 5px);
 }
 
+.home-faq-section {
+  padding: 105px 0;
+  background: var(--surface-gray);
+}
+
+.home-faq-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.4fr);
+  gap: clamp(56px, 8vw, 110px);
+  align-items: start;
+}
+
+.home-faq-heading h2 {
+  max-width: 500px;
+  margin: 20px 0 0;
+  font-size: clamp(40px, 4.6vw, 62px);
+}
+
+.home-faq-list details {
+  padding: 28px 0;
+}
+
+.home-faq-list summary {
+  min-height: 44px;
+  font-size: clamp(23px, 2.4vw, 30px);
+  line-height: 1.2;
+}
+
+.faq summary {
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-faq-list .faq-answer {
+  max-width: 690px;
+  padding-top: 10px;
+}
+
+.home-faq-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.text-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+}
+
+.foot a:not(.brand) {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+}
+
 .values-band {
   padding: 105px 0;
 }
@@ -475,6 +535,67 @@ footer,
 
 .therapy-intro-copy .lead:last-child {
   margin-bottom: 0;
+}
+
+.therapy-disclosure {
+  margin-top: 30px;
+}
+
+.therapy-disclosure summary {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: var(--wine);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  list-style: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.therapy-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.therapy-disclosure-open {
+  display: none;
+}
+
+.therapy-disclosure[open] .therapy-disclosure-closed {
+  display: none;
+}
+
+.therapy-disclosure[open] .therapy-disclosure-open {
+  display: inline;
+}
+
+.therapy-disclosure-body {
+  padding-top: 24px;
+  animation: disclosure-reveal 280ms ease both;
+}
+
+@keyframes disclosure-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .therapy-disclosure-body {
+    animation: none;
+  }
+}
+
+.about-photo-real picture,
+.personal-photo picture,
+.about-preview-photo picture {
+  display: contents;
 }
 
 .audience-reason {
@@ -970,6 +1091,11 @@ summary:focus-visible {
     gap: 36px;
   }
 
+  .home-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
   .section-title {
     align-items: flex-start;
     flex-direction: column;
@@ -1127,6 +1253,26 @@ summary:focus-visible {
 
   .therapy-intro-copy .lead {
     margin-bottom: 20px;
+  }
+
+  .therapy-disclosure {
+    margin-top: 26px;
+  }
+
+  .therapy-disclosure-body {
+    padding-top: 20px;
+  }
+
+  .home-faq-section {
+    padding: 75px 0;
+  }
+
+  .home-faq-grid {
+    gap: 30px;
+  }
+
+  .home-faq-list details {
+    padding: 24px 0;
   }
 
   .about-professional-topics {

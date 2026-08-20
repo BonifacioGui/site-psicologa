@@ -1,5 +1,6 @@
 import { professionalContact } from "./site";
 import { BrainCircuit, Flower2, Gauge, Heart, Signpost, UsersRound } from "lucide-react";
+import { homeFaqEntries } from "./faq-data";
 
 export default function Home() {
   return <main>
@@ -18,6 +19,16 @@ export default function Home() {
       </div>
       <figure className="portrait">
         <picture>
+          <source
+            type="image/avif"
+            srcSet="/ana-livia-hero-arch-transparent-512.avif 512w, /ana-livia-hero-arch-transparent.avif 1055w"
+            sizes="(max-width: 560px) min(100vw, 360px), (max-width: 900px) 420px, 500px"
+          />
+          <source
+            type="image/webp"
+            srcSet="/ana-livia-hero-arch-transparent-512.webp 512w, /ana-livia-hero-arch-transparent.webp 1055w"
+            sizes="(max-width: 560px) min(100vw, 360px), (max-width: 900px) 420px, 500px"
+          />
           <img
             className="profile-photo hero-profile-photo"
             src="/ana-livia-hero-arch-transparent.png"
@@ -76,9 +87,17 @@ export default function Home() {
         <h2>Nunca fiz terapia, como funciona?</h2>
         <p className="lead">Você não precisa chegar sabendo exatamente o que dizer, nem ter tudo organizado na cabeça. Muitas vezes, começamos justamente pelo que está confuso.</p>
         <p className="lead">Nas primeiras sessões, o psicólogo procura conhecer melhor você, sua história, o que tem acontecido e o que fez você buscar ajuda naquele momento. Aos poucos, vocês vão identificando dificuldades, padrões, emoções e situações que merecem mais atenção.</p>
-        <p className="lead">Durante o processo, você pode falar sobre pensamentos, sentimentos, relações, acontecimentos do dia a dia, medos, inseguranças ou qualquer questão que esteja sendo importante para você. O papel do psicólogo não é julgar, dar broncas ou simplesmente dizer o que você deve fazer, mas ajudar você a compreender melhor o que está vivendo e encontrar formas mais saudáveis de lidar com isso.</p>
-        <p className="lead">A terapia também não precisa começar por uma grande crise. Você pode buscar acompanhamento porque está se sentindo sobrecarregado, quer se conhecer melhor, deseja mudar alguns padrões ou simplesmente sente que algumas coisas poderiam estar mais leves.</p>
-        <p className="lead">E não se preocupe se houver silêncio, nervosismo ou dificuldade para falar no começo. Isso também faz parte. O vínculo e a confiança são construídos aos poucos, no seu ritmo.</p>
+        <details className="therapy-disclosure">
+          <summary>
+            <span className="therapy-disclosure-closed">Entenda melhor como funciona ↓</span>
+            <span className="therapy-disclosure-open">Mostrar menos ↑</span>
+          </summary>
+          <div className="therapy-disclosure-body">
+            <p className="lead">Durante o processo, você pode falar sobre pensamentos, sentimentos, relações, acontecimentos do dia a dia, medos, inseguranças ou qualquer questão que esteja sendo importante para você. O papel do psicólogo não é julgar, dar broncas ou simplesmente dizer o que você deve fazer, mas ajudar você a compreender melhor o que está vivendo e encontrar formas mais saudáveis de lidar com isso.</p>
+            <p className="lead">A terapia também não precisa começar por uma grande crise. Você pode buscar acompanhamento porque está se sentindo sobrecarregado, quer se conhecer melhor, deseja mudar alguns padrões ou simplesmente sente que algumas coisas poderiam estar mais leves.</p>
+            <p className="lead">E não se preocupe se houver silêncio, nervosismo ou dificuldade para falar no começo. Isso também faz parte. O vínculo e a confiança são construídos aos poucos, no seu ritmo.</p>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -111,17 +130,46 @@ export default function Home() {
         <a className="text-link" href="/sobre">Conheça a profissional →</a>
       </div>
       <figure className="about-preview-photo">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/ana-livia-home-sobre-arco-v2.png"
-          alt="Ana Lívia sentada em retrato profissional com blazer claro"
-          width="1132"
-          height="1600"
-          loading="lazy"
-          decoding="async"
-        />
+        <picture>
+          <source
+            type="image/avif"
+            srcSet="/ana-livia-home-sobre-arco-v2-566.avif 566w, /ana-livia-home-sobre-arco-v2.avif 1132w"
+            sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) min(520px, calc(100vw - 48px)), 430px"
+          />
+          <source
+            type="image/webp"
+            srcSet="/ana-livia-home-sobre-arco-v2-566.webp 566w, /ana-livia-home-sobre-arco-v2.webp 1132w"
+            sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) min(520px, calc(100vw - 48px)), 430px"
+          />
+          <img
+            src="/ana-livia-home-sobre-arco-v2.png"
+            srcSet="/ana-livia-home-sobre-arco-v2-566.png 566w, /ana-livia-home-sobre-arco-v2.png 1132w"
+            sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) min(520px, calc(100vw - 48px)), 430px"
+            alt="Ana Lívia sentada em retrato profissional com blazer claro"
+            width="1132"
+            height="1600"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
         <span className="about-preview-psi" aria-hidden="true">Ψ</span>
       </figure>
+    </section>
+
+    <section className="home-faq-section">
+      <div className="shell home-faq-grid">
+        <div className="home-faq-heading">
+          <p className="index">04 — Dúvidas frequentes</p>
+          <h2>Informações claras antes de começar.</h2>
+        </div>
+        <div className="faq home-faq-list">
+          {homeFaqEntries.map(({ question, homeAnswer }) => <details key={question}>
+            <summary>{question}</summary>
+            <div className="faq-answer"><p>{homeAnswer}</p></div>
+          </details>)}
+          <a className="text-link home-faq-link" href="/faq">Ver todas as perguntas →</a>
+        </div>
+      </div>
     </section>
 
     <section className="cta"><p className="eyebrow pale">Contato inicial</p><h2>Quer saber sobre horários e valores?</h2><p>Envie uma mensagem breve. Não é necessário relatar questões clínicas pelo WhatsApp.</p><a className="button light" href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">Conversar pelo WhatsApp</a></section>

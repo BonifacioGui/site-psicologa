@@ -56,7 +56,7 @@ for (const route of routes) {
       return `${attribute}="${candidates}"`;
     })
     .replace(/(href|src)="\/(?!\/)/g, `$1="${basePath}/`)
-    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
+    .replace(/<script\b(?![^>]*\bid="theme-init")[^>]*>[\s\S]*?<\/script>/gi, "")
     .replace(/<link[^>]+rel="modulepreload"[^>]*>/gi, "");
   const outputDir = route ? path.join("out", route) : "out";
   await mkdir(outputDir, { recursive: true });
@@ -74,8 +74,12 @@ if (
   || !index.includes("CRP 02/34611")
   || !index.includes("Psicoterapia online para adolescentes")
   || !index.includes(`${basePath}/_next/`)
+  || !index.includes(`srcSet="${basePath}/ana-livia-hero-arch-transparent-512.avif 512w, ${basePath}/ana-livia-hero-arch-transparent.avif 1055w"`)
   || !index.includes(`srcSet="${basePath}/ana-livia-hero-arch-transparent-512.png 512w, ${basePath}/ana-livia-hero-arch-transparent.png 1055w"`)
   || !index.includes(`<meta property="og:image" content="${origin}/og.png"`)
+  || !index.includes('id="theme-init"')
+  || !index.includes('data-theme-toggle')
+  || !index.includes(`${basePath}/brand/horizontal-light.svg`)
 ) {
   throw new Error("A validação da exportação estática falhou.");
 }

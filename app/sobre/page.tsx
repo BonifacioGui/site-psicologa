@@ -12,18 +12,21 @@ export default function Page() {
     <PageHero eyebrow="Sobre mim" title="Conhecimento técnico, ética e humanidade." intro="Minha formação, experiência clínica e interesse pela ciência orientam uma prática voltada ao cuidado de adolescentes, jovens adultos e adultos." />
     <section className="content shell about-grid">
       <figure className="about-photo-real">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="profile-photo"
-          src="/ana-livia-sobre.jpg"
-          srcSet="/ana-livia-sobre-480.jpg 480w, /ana-livia-sobre.jpg 960w"
-          sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) calc(100vw - 48px), 430px"
-          alt="Retrato profissional de Ana Lívia Calado da Costa"
-          width="960"
-          height="1280"
-          loading="lazy"
-          decoding="async"
-        />
+        <picture>
+          <source type="image/avif" srcSet="/ana-livia-sobre-480.avif 480w, /ana-livia-sobre.avif 960w" sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) calc(100vw - 48px), 430px" />
+          <source type="image/webp" srcSet="/ana-livia-sobre-480.webp 480w, /ana-livia-sobre.webp 960w" sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) calc(100vw - 48px), 430px" />
+          <img
+            className="profile-photo"
+            src="/ana-livia-sobre.jpg"
+            srcSet="/ana-livia-sobre-480.jpg 480w, /ana-livia-sobre.jpg 960w"
+            sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) calc(100vw - 48px), 430px"
+            alt="Retrato profissional de Ana Lívia Calado da Costa"
+            width="960"
+            height="1280"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
         <figcaption>Ana Lívia Calado da Costa<br /><span>Psicóloga · CRP 02/34611</span></figcaption>
       </figure>
       <div className="prose about-story">
@@ -63,17 +66,20 @@ export default function Page() {
         <div className="personal-aside">
           <p className="index">Para além da psicóloga</p>
           <figure className="personal-photo">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/ana-livia-pessoal.jpg"
-              srcSet="/ana-livia-pessoal-480.jpg 480w, /ana-livia-pessoal.jpg 960w"
-              sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) 520px, 430px"
-              alt="Ana Lívia lendo um livro em seu espaço de estudos"
-              width="960"
-              height="1280"
-              loading="lazy"
-              decoding="async"
-            />
+            <picture>
+              <source type="image/avif" srcSet="/ana-livia-pessoal-480.avif 480w, /ana-livia-pessoal.avif 960w" sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) 520px, 430px" />
+              <source type="image/webp" srcSet="/ana-livia-pessoal-480.webp 480w, /ana-livia-pessoal.webp 960w" sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) 520px, 430px" />
+              <img
+                src="/ana-livia-pessoal.jpg"
+                srcSet="/ana-livia-pessoal-480.jpg 480w, /ana-livia-pessoal.jpg 960w"
+                sizes="(max-width: 560px) calc(100vw - 30px), (max-width: 900px) 520px, 430px"
+                alt="Ana Lívia lendo um livro em seu espaço de estudos"
+                width="960"
+                height="1280"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </figure>
         </div>
         <div className="personal-copy"><h2>Também sou alguém que continua se construindo.</h2><p>Fora do consultório, penso, sinto, aprendo e me questiono. Gosto de livros, de momentos tranquilos, de conhecer lugares novos, de estar perto de quem amo e de conversas que vão além do superficial.</p><p>Talvez uma das coisas mais importantes que a minha própria história tenha me ensinado seja esta: eu entendo como pode ser difícil não saber o que fazer com aquilo que você sente.</p><p>Por isso, não acredito em uma Psicologia distante ou em um profissional colocado em um pedestal. Acredito em conhecimento técnico, ética e responsabilidade, mas também em humanidade.</p><div className="actions"><a className="button" href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">Conversar sobre atendimento</a><a className="text-link" href="/formacao">Ver formação e trajetória acadêmica →</a></div></div>
