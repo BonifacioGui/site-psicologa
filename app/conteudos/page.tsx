@@ -4,6 +4,7 @@ import { PageHero } from "../components/PageHero";
 export const metadata: Metadata = {
   title: "Conteúdos",
   description: "Conteúdos de Psicologia sobre ansiedade, adolescência, autoestima, relações e início da vida adulta, em linguagem acessível e responsável.",
+  robots: { index: false, follow: false },
 };
 
 const posts = [
