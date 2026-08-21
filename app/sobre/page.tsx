@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return <main>
-    <PageHero eyebrow="Sobre mim" title="Conhecimento técnico, ética e humanidade." intro="Minha formação, experiência clínica e interesse pela ciência orientam uma prática voltada ao cuidado de adolescentes, jovens adultos e adultos." />
+    <PageHero eyebrow="Sobre mim" title="Conhecimento técnico, ética e humanidade." intro="Minha formação, experiência clínica e interesse pela ciência orientam minha prática com adolescentes, jovens adultos e adultos." />
     <section className="content shell about-grid">
       <figure className="about-photo-real">
         <picture>

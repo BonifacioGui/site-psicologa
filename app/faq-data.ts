@@ -8,10 +8,10 @@ export const faqEntries: FaqEntry[] = [
   {
     question: "Como funciona a primeira sessão?",
     answer: [
-      "É um momento para compreender o que motivou a busca pela terapia, sua história, dificuldades e expectativas. Também acolhemos sua trajetória, esclarecemos dúvidas e conversamos sobre como será o processo.",
+      "Nesse primeiro encontro, procuro compreender o que motivou sua busca pela terapia, sua história, dificuldades e expectativas. Também acolho sua trajetória, esclareço dúvidas e converso com você sobre como será o processo.",
       "Você não precisa chegar com tudo organizado ou saber exatamente por onde começar. Antes do acompanhamento, também recebe as informações e os combinados administrativos registrados em contrato ou termo.",
     ],
-    homeAnswer: "É um momento para compreender o que motivou a busca pela terapia, conhecer sua história, acolher suas dificuldades e expectativas e esclarecer dúvidas sobre o processo. Você não precisa chegar com tudo organizado ou saber exatamente por onde começar.",
+    homeAnswer: "Nesse primeiro encontro, procuro compreender o que motivou sua busca pela terapia, conhecer sua história, acolher suas dificuldades e expectativas e esclarecer dúvidas sobre o processo. Você não precisa chegar com tudo organizado ou saber exatamente por onde começar.",
   },
   {
     question: "Qual a duração das sessões e do tratamento?",
@@ -32,7 +32,7 @@ export const faqEntries: FaqEntry[] = [
   {
     question: "Como funciona para adolescentes?",
     answer: [
-      "Há uma conversa inicial com responsáveis e combinados claros sobre participação e sigilo. Responsáveis colaboram com informações, autorização e condições para o atendimento, mas o adolescente precisa de privacidade para construir confiança no processo.",
+      "No início, converso com os responsáveis e estabelecemos combinados claros sobre participação e sigilo. Responsáveis colaboram com informações, autorização e condições para o atendimento, mas o adolescente precisa de privacidade para construir confiança no processo.",
       "O conteúdo detalhado das sessões não é repassado. Os limites do sigilo e as situações que exigem proteção são explicados desde o início.",
     ],
   },
