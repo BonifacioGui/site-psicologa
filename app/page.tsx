@@ -9,10 +9,7 @@ export default function Home() {
       <div className="hero-copy">
         <p className="eyebrow">Atendimento psicológico online <span aria-hidden="true">·</span> {professionalContact.locationDisplay}</p>
         <h1 className="professional-name">Ana Lívia Calado da Costa</h1>
-        <div className="professional-credential">
-          <p className="professional-id">Psicóloga <span aria-hidden="true">·</span> <RegistryLink /></p>
-          <RegistryLink label="verification" />
-        </div>
+        <p className="professional-id">Psicóloga <span aria-hidden="true">·</span> <RegistryLink /></p>
         <h2 className="hero-service">Psicoterapia online para adolescentes e jovens adultos.</h2>
         <p className="approach-label">Terapia Cognitivo-Comportamental</p>
         <p className="hero-emotional">Um trabalho para compreender o que acontece hoje, reconhecer padrões e testar respostas mais úteis na vida real.</p>
