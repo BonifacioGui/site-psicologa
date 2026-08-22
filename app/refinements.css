@@ -347,7 +347,7 @@ footer,
 }
 
 .focus-area-card {
-  min-height: 178px;
+  min-height: 204px;
   padding: 20px 14px 18px;
   background: rgb(250 240 230 / 76%);
   border: 1px solid rgb(116 59 77 / 13%);
@@ -391,7 +391,7 @@ footer,
 .focus-area-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 10.5px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
@@ -1174,7 +1174,7 @@ summary:focus-visible {
   }
 
   .focus-area-card {
-    min-height: 172px;
+    min-height: 220px;
     padding-inline: 12px;
   }
 

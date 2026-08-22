@@ -15,6 +15,7 @@ import "./livia-suggestions.css";
 import "./theme.css";
 import { BrandLogo } from "./components/BrandLogo";
 import { ThemeToggle } from "./components/ThemeToggle";
+import { RegistryLink } from "./components/RegistryLink";
 
 const themeScript = `(() => {
   const key = "ana-livia-theme";
@@ -112,6 +113,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </details>
     </div></header>
     <div id="conteudo">{children}</div>
-    <footer><div className="shell foot"><div><BrandLogo placement="footer" /><p>Ana Lívia Calado da Costa<br />CRP 02/34611 · Atendimento online<br />{professionalContact.locationDisplay}</p></div><div><strong>Navegue</strong><a href="/sobre">Sobre</a><a href="/atendimento">Atendimento</a></div><div><strong>Contato</strong><a href="/faq">Perguntas frequentes</a><a href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">WhatsApp</a><a href={professionalContact.gmailHref} target="_blank" rel="noreferrer">E-mail</a><a href={professionalContact.instagramHref} target="_blank" rel="noreferrer">Instagram: {professionalContact.instagramDisplay}</a><a href="/politica-de-privacidade">Privacidade</a></div><div><strong>Importante</strong><p>Este site não oferece atendimento de urgência. Em risco imediato, ligue 192 ou 188 (CVV).</p></div></div><div className="shell copy">© 2026 Ana Lívia Calado da Costa · Conteúdo informativo; não substitui avaliação profissional.</div></footer>
+    <footer><div className="shell foot"><div><BrandLogo placement="footer" /><p>Ana Lívia Calado da Costa<br /><RegistryLink /> · Atendimento online<br />{professionalContact.locationDisplay}</p></div><div><strong>Navegue</strong><a href="/sobre">Sobre</a><a href="/atendimento">Atendimento</a></div><div><strong>Contato</strong><a href="/faq">Perguntas frequentes</a><a href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">WhatsApp</a><a href={professionalContact.gmailHref} target="_blank" rel="noreferrer">E-mail</a><a href={professionalContact.instagramHref} target="_blank" rel="noreferrer">Instagram: {professionalContact.instagramDisplay}</a><a href="/politica-de-privacidade">Privacidade</a></div><div><strong>Importante</strong><p>Este site não oferece atendimento de urgência. Em risco imediato, ligue 192 ou 188 (CVV).</p></div></div><div className="shell copy">© 2026 Ana Lívia Calado da Costa · Conteúdo informativo; não substitui avaliação profissional.</div></footer>
   </body></html>;
 }

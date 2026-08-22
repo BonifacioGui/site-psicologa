@@ -1,6 +1,7 @@
 import { professionalContact } from "./site";
 import { BrainCircuit, Flower2, Gauge, Heart, Signpost, UsersRound } from "lucide-react";
 import { homeFaqEntries } from "./faq-data";
+import { RegistryLink } from "./components/RegistryLink";
 
 export default function Home() {
   return <main>
@@ -8,7 +9,7 @@ export default function Home() {
       <div className="hero-copy">
         <p className="eyebrow">Atendimento psicológico online <span aria-hidden="true">·</span> {professionalContact.locationDisplay}</p>
         <h1 className="professional-name">Ana Lívia Calado da Costa</h1>
-        <p className="professional-id">Psicóloga <span aria-hidden="true">·</span> CRP 02/34611</p>
+        <p className="professional-id">Psicóloga <span aria-hidden="true">·</span> <RegistryLink /></p>
         <h2 className="hero-service">Psicoterapia online para adolescentes e jovens adultos.</h2>
         <p className="approach-label">Terapia Cognitivo-Comportamental</p>
         <p className="hero-emotional">Um trabalho para compreender o que acontece hoje, reconhecer padrões e testar respostas mais úteis na vida real.</p>

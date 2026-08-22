@@ -32,16 +32,16 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --bg: #171b20;
-  --surface: #20252b;
-  --surface-raised: #282d33;
+  --bg: #1a1618;
+  --surface: #221c1f;
+  --surface-raised: #2b2327;
   --text: #f7f3ee;
   --text-muted: #d2c7c5;
   --accent: #d9b7bd;
   --accent-deep: #743b4d;
   --accent-soft: #3b2d33;
   --border: rgb(247 243 238 / 16%);
-  --header-bg: rgb(23 27 32 / 92%);
+  --header-bg: rgb(26 22 24 / 92%);
   --section-dark: #111419;
   --section-dark-alt: #242930;
   --on-dark: #f7f3ee;
@@ -466,4 +466,30 @@ footer,
   .theme-toggle {
     transition: none;
   }
+}
+
+.registry-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.28em;
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.28em;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.registry-link:hover,
+.registry-link:focus-visible {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
+.professional-id .registry-link:hover,
+.professional-id .registry-link:focus-visible {
+  color: inherit;
+}
+
+.foot .registry-link::after {
+  display: none;
 }
