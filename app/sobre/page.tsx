@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "../components/PageHero";
 import { professionalContact } from "../site";
+import { RegistryLink } from "../components/RegistryLink";
 
 export const metadata: Metadata = {
   title: "Sobre mim",
@@ -27,7 +28,7 @@ export default function Page() {
             decoding="async"
           />
         </picture>
-        <figcaption>Ana Lívia Calado da Costa<br /><span>Psicóloga · CRP 02/34611</span></figcaption>
+        <figcaption>Ana Lívia Calado da Costa<br /><span>Psicóloga · <RegistryLink /></span></figcaption>
       </figure>
       <div className="prose about-story">
         <p className="eyebrow">Formação e prática clínica</p>
