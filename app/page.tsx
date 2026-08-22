@@ -14,7 +14,7 @@ export default function Home() {
         <p className="approach-label">Terapia Cognitivo-Comportamental</p>
         <p className="hero-emotional">Um trabalho para compreender o que acontece hoje, reconhecer padrões e testar respostas mais úteis na vida real.</p>
         <div className="actions">
-          <a className="button" href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">Conversar sobre atendimento</a>
+          <a className="button" href="/primeiro-contato">Conversar sobre atendimento</a>
           <a className="button outline" href="#atendimentos">Conheça o atendimento ↓</a>
         </div>
       </div>
