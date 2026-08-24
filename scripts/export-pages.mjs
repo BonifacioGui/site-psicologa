@@ -9,7 +9,8 @@ const configuredOrigin = process.env.SITE_URL?.trim().replace(/\/+$/, "");
 const cloudflareOrigin = process.env.CF_PAGES_URL?.trim().replace(/\/+$/, "");
 const basePath = isCloudflarePages ? "" : githubBasePath;
 const origin = configuredOrigin || (isCloudflarePages ? cloudflareOrigin : githubOrigin) || githubOrigin;
-const routes = ["", "sobre", "atendimento", "adolescentes", "jovens-adultos", "abordagem-tcc", "formacao", "faq", "contato", "politica-de-privacidade", "conteudos"];
+const routes = ["", "sobre", "atendimento", "adolescentes", "jovens-adultos", "abordagem-tcc", "formacao", "faq", "contato", "politica-de-privacidade", "conteudos", "primeiro-contato"];
+const sitemapRoutes = routes.filter((route) => route !== "primeiro-contato");
 
 const workerUrl = new URL("../dist/server/index.js", import.meta.url);
 workerUrl.searchParams.set("pages-export", Date.now().toString());
@@ -71,12 +72,13 @@ for (const route of routes) {
   await writeFile(path.join(outputDir, "index.html"), html, "utf8");
 }
 
-const sitemap = routes.map((route) => `<url><loc>${origin}/${route}</loc></url>`).join("");
+const sitemap = sitemapRoutes.map((route) => `<url><loc>${origin}/${route}</loc></url>`).join("");
 await writeFile("out/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${sitemap}</urlset>`, "utf8");
 await writeFile("out/robots.txt", `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`, "utf8");
 await writeFile("out/.nojekyll", "", "utf8");
 
 const index = await readFile("out/index.html", "utf8");
+const firstContact = await readFile("out/primeiro-contato/index.html", "utf8");
 if (
   !index.includes("Ana Lívia Calado da Costa")
   || !index.includes("CRP 02/34611")
@@ -88,6 +90,7 @@ if (
   || !index.includes('id="theme-init"')
   || !index.includes('data-theme-toggle')
   || !index.includes(`${basePath}/brand/horizontal-light.svg`)
+  || !firstContact.includes("Seu primeiro contato pode ser simples.")
 ) {
   throw new Error("A validação da exportação estática falhou.");
 }
