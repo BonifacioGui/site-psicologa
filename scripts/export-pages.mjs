@@ -2,8 +2,13 @@ import { cp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const repository = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "site-psicologa";
-const basePath = `/${repository}`;
-const origin = `https://bonifaciogui.github.io${basePath}`;
+const githubBasePath = `/${repository}`;
+const githubOrigin = `https://bonifaciogui.github.io${githubBasePath}`;
+const isCloudflarePages = process.env.CF_PAGES === "1";
+const configuredOrigin = process.env.SITE_URL?.trim().replace(/\/+$/, "");
+const cloudflareOrigin = process.env.CF_PAGES_URL?.trim().replace(/\/+$/, "");
+const basePath = isCloudflarePages ? "" : githubBasePath;
+const origin = configuredOrigin || (isCloudflarePages ? cloudflareOrigin : githubOrigin) || githubOrigin;
 const routes = ["", "sobre", "atendimento", "adolescentes", "jovens-adultos", "abordagem-tcc", "formacao", "faq", "contato", "politica-de-privacidade", "conteudos"];
 
 const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -15,6 +20,8 @@ await mkdir("out", { recursive: true });
 await cp("dist/client", "out", { recursive: true });
 
 async function rewriteCssAssetUrls(directory) {
+  if (!basePath) return;
+
   const entries = await readdir(directory, { withFileTypes: true });
 
   for (const entry of entries) {
@@ -48,6 +55,7 @@ for (const route of routes) {
   let html = await response.text();
   html = html
     .replaceAll("https://www.exemplo-psicologia.com.br", origin)
+    .replaceAll(githubOrigin, origin)
     .replace(/\b(srcSet|imageSrcSet)="([^"]+)"/g, (_, attribute, value) => {
       const candidates = value
         .split(",")
@@ -83,4 +91,4 @@ if (
 ) {
   throw new Error("A validação da exportação estática falhou.");
 }
-console.log(`Exportação pronta em out para ${origin}`);
+console.log(`Exportação pronta em out para ${origin} (${isCloudflarePages ? "Cloudflare Pages" : "GitHub Pages"})`);

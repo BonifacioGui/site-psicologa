@@ -89,10 +89,25 @@ header {
   transform: none;
 }
 
-.editorial-hero .portrait::before,
 .editorial-hero .portrait::after,
 .editorial-hero .portrait figcaption {
   display: none;
+}
+
+.editorial-hero .portrait::before {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  right: 2%;
+  bottom: 3%;
+  width: 42%;
+  height: 66%;
+  border: 1px solid rgb(116 59 77 / 22%);
+  border-radius: 44px 4px 44px 4px;
+  background: var(--accent-soft);
+  content: "";
+  opacity: 0.42;
+  transform: translate(12%, 5%);
 }
 
 .editorial-hero .portrait picture {
@@ -153,10 +168,17 @@ header {
     clip-path: none;
   }
 
-  .editorial-hero .portrait::before,
   .editorial-hero .portrait::after,
   .editorial-hero .portrait figcaption {
     display: none;
+  }
+
+  .editorial-hero .portrait::before {
+    right: 5%;
+    bottom: 2%;
+    width: 38%;
+    height: 60%;
+    opacity: 0.32;
   }
 
   .editorial-hero .profile-photo {
@@ -276,6 +298,10 @@ header {
     position: absolute;
     inset: 0;
     height: 100%;
+  }
+
+  .editorial-hero .portrait::before {
+    display: none;
   }
 
   .editorial-hero .profile-photo {
