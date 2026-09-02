@@ -1,4 +1,4 @@
-export const siteUrl = "https://bonifaciogui.github.io/site-psicologa";
+export const siteUrl = "https://analiviapsi.pages.dev";
 
 export const professionalContact = {
   email: "analivia103@gmail.com",
