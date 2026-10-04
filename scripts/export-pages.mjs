@@ -83,6 +83,9 @@ await writeFile("out/.nojekyll", "", "utf8");
 
 const index = await readFile("out/index.html", "utf8");
 const firstContact = await readFile("out/primeiro-contato/index.html", "utf8");
+await Promise.all([
+  "favicon.ico", "favicon-48.png", "favicon-96.png", "apple-touch-icon.png",
+].map((file) => readFile(path.join("out", file))));
 if (
   !index.includes("Ana Lívia Calado da Costa")
   || !index.includes("CRP 02/34611")
@@ -95,6 +98,8 @@ if (
   || !index.includes('id="theme-init"')
   || !index.includes('data-theme-toggle')
   || !index.includes(`${basePath}/brand/horizontal-light.svg`)
+  || !index.includes(`${basePath}/favicon.ico`)
+  || !index.includes(`${basePath}/favicon-96.png`)
   || !firstContact.includes("Seu primeiro contato pode ser simples.")
 ) {
   throw new Error("A validação da exportação estática falhou.");
