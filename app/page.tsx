@@ -1,10 +1,13 @@
 import { professionalContact } from "./site";
+import { professionalStructuredDataJson } from "./structured-data";
 import { BrainCircuit, Flower2, Gauge, Heart, Signpost, UsersRound } from "lucide-react";
 import { homeFaqEntries } from "./faq-data";
 import { RegistryLink } from "./components/RegistryLink";
 
 export default function Home() {
-  return <main>
+  return <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: professionalStructuredDataJson }} />
+    <main>
     <section className="hero editorial-hero shell">
       <div className="hero-copy">
         <p className="eyebrow">Atendimento psicológico online <span aria-hidden="true">·</span> {professionalContact.locationDisplay}</p>
@@ -174,5 +177,6 @@ export default function Home() {
     </section>
 
     <section className="cta"><p className="eyebrow pale">Contato inicial</p><h2>Quer saber sobre horários e valores?</h2><p>Envie uma mensagem breve. Não é necessário relatar questões clínicas pelo WhatsApp.</p><a className="button light" href={professionalContact.whatsappHref} target="_blank" rel="noreferrer">Conversar pelo WhatsApp</a></section>
-  </main>;
+    </main>
+  </>;
 }
