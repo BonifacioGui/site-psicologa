@@ -1,4 +1,4 @@
-export const siteUrl = "https://analiviapsi.pages.dev";
+export const siteUrl = "https://analiviapsicologia.com.br";
 
 export const professionalContact = {
   email: "analivia103@gmail.com",
