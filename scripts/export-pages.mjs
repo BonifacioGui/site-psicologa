@@ -66,7 +66,9 @@ for (const route of routes) {
       return `${attribute}="${candidates}"`;
     })
     .replace(/(href|src)="\/(?!\/)/g, `$1="${basePath}/`)
-    .replace(/<script\b(?![^>]*\bid="theme-init")[^>]*>[\s\S]*?<\/script>/gi, "")
+    .replace(/<script\b([^>]*)>[\s\S]*?<\/script>/gi, (script, attributes) =>
+      /\bid=["\x27]theme-init["\x27]/i.test(attributes)
+      || /\btype=["\x27]application\/ld\+json["\x27]/i.test(attributes) ? script : "")
     .replace(/<link[^>]+rel="modulepreload"[^>]*>/gi, "");
   if (route !== "primeiro-contato") {
     html = html.replace("</head>", `<link rel="canonical" href="${canonicalOrigin}/${route}" /></head>`);
@@ -83,6 +85,23 @@ await writeFile("out/.nojekyll", "", "utf8");
 
 const index = await readFile("out/index.html", "utf8");
 const firstContact = await readFile("out/primeiro-contato/index.html", "utf8");
+const jsonLdMatch = index.match(/<script\b[^>]*\btype=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i);
+if (!jsonLdMatch) throw new Error("JSON-LD não foi preservado na exportação estática.");
+let schema;
+try {
+  schema = JSON.parse(jsonLdMatch[1]);
+} catch {
+  throw new Error("O JSON-LD exportado não é um JSON válido.");
+}
+if (
+  schema["@context"] !== "https://schema.org"
+  || !Array.isArray(schema["@graph"])
+  || !schema["@graph"].some((item) => item["@type"] === "Person" && item.name === "Ana Lívia Calado da Costa" && item.identifier?.value === "02/34611")
+  || !schema["@graph"].some((item) => item["@type"] === "OnlineBusiness" && item.url === canonicalOrigin)
+) {
+  throw new Error("A identidade profissional no JSON-LD está ausente ou incorreta.");
+}
+
 await Promise.all([
   "favicon.ico", "favicon-48.png", "favicon-96.png", "apple-touch-icon.png",
 ].map((file) => readFile(path.join("out", file))));
