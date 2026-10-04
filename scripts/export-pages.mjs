@@ -9,6 +9,7 @@ const configuredOrigin = process.env.SITE_URL?.trim().replace(/\/+$/, "");
 const cloudflareOrigin = process.env.CF_PAGES_URL?.trim().replace(/\/+$/, "");
 const basePath = isCloudflarePages ? "" : githubBasePath;
 const origin = configuredOrigin || (isCloudflarePages ? cloudflareOrigin : githubOrigin) || githubOrigin;
+const canonicalOrigin = configuredOrigin || "https://analiviapsicologia.com.br";
 const routes = ["", "sobre", "atendimento", "adolescentes", "jovens-adultos", "abordagem-tcc", "formacao", "faq", "contato", "politica-de-privacidade", "conteudos", "primeiro-contato"];
 const sitemapRoutes = routes.filter((route) => route !== "primeiro-contato");
 
@@ -67,6 +68,9 @@ for (const route of routes) {
     .replace(/(href|src)="\/(?!\/)/g, `$1="${basePath}/`)
     .replace(/<script\b(?![^>]*\bid="theme-init")[^>]*>[\s\S]*?<\/script>/gi, "")
     .replace(/<link[^>]+rel="modulepreload"[^>]*>/gi, "");
+  if (route !== "primeiro-contato") {
+    html = html.replace("</head>", `<link rel="canonical" href="${canonicalOrigin}/${route}" /></head>`);
+  }
   const outputDir = route ? path.join("out", route) : "out";
   await mkdir(outputDir, { recursive: true });
   await writeFile(path.join(outputDir, "index.html"), html, "utf8");
@@ -87,6 +91,7 @@ if (
   || !index.includes(`srcSet="${basePath}/ana-livia-hero-arch-transparent-512.avif 512w, ${basePath}/ana-livia-hero-arch-transparent.avif 1055w"`)
   || !index.includes(`srcSet="${basePath}/ana-livia-hero-arch-transparent-512.png 512w, ${basePath}/ana-livia-hero-arch-transparent.png 1055w"`)
   || !index.includes(`<meta property="og:image" content="${origin}/og.png"`)
+  || !index.includes(`<link rel="canonical" href="${canonicalOrigin}/" />`)
   || !index.includes('id="theme-init"')
   || !index.includes('data-theme-toggle')
   || !index.includes(`${basePath}/brand/horizontal-light.svg`)
