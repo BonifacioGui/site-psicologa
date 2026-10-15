@@ -10,8 +10,8 @@ const cloudflareOrigin = process.env.CF_PAGES_URL?.trim().replace(/\/+$/, "");
 const basePath = isCloudflarePages ? "" : githubBasePath;
 const origin = configuredOrigin || (isCloudflarePages ? cloudflareOrigin : githubOrigin) || githubOrigin;
 const canonicalOrigin = configuredOrigin || "https://analiviapsicologia.com.br";
-const routes = ["", "sobre", "atendimento", "adolescentes", "jovens-adultos", "abordagem-tcc", "formacao", "faq", "contato", "politica-de-privacidade", "conteudos", "primeiro-contato"];
-const sitemapRoutes = routes.filter((route) => route !== "primeiro-contato");
+const routes = ["", "sobre", "atendimento", "adolescentes", "jovens-adultos", "abordagem-tcc", "formacao", "faq", "contato", "politica-de-privacidade", "conteudos", "conteudos/psicoterapia-online-para-adolescentes", "primeiro-contato"];
+const sitemapRoutes = routes.filter((route) => !["conteudos", "conteudos/psicoterapia-online-para-adolescentes", "primeiro-contato"].includes(route));
 
 const workerUrl = new URL("../dist/server/index.js", import.meta.url);
 workerUrl.searchParams.set("pages-export", Date.now().toString());
@@ -85,6 +85,7 @@ await writeFile("out/.nojekyll", "", "utf8");
 
 const index = await readFile("out/index.html", "utf8");
 const firstContact = await readFile("out/primeiro-contato/index.html", "utf8");
+const draftArticle = await readFile("out/conteudos/psicoterapia-online-para-adolescentes/index.html", "utf8");
 const jsonLdMatch = index.match(/<script\b[^>]*\btype=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i);
 if (!jsonLdMatch) throw new Error("JSON-LD não foi preservado na exportação estática.");
 let schema;
@@ -120,6 +121,8 @@ if (
   || !index.includes(`${basePath}/favicon.ico`)
   || !index.includes(`${basePath}/favicon-96.png`)
   || !firstContact.includes("Seu primeiro contato pode ser simples.")
+  || !draftArticle.includes("Rascunho para revisão profissional")
+  || !draftArticle.includes('<meta name="robots" content="noindex, follow"')
 ) {
   throw new Error("A validação da exportação estática falhou.");
 }
