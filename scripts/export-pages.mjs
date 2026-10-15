@@ -97,7 +97,7 @@ try {
 if (
   schema["@context"] !== "https://schema.org"
   || !Array.isArray(schema["@graph"])
-  || !schema["@graph"].some((item) => item["@type"] === "Person" && item.name === "Ana Lívia Calado da Costa" && item.identifier?.value === "02/34611")
+  || !schema["@graph"].some((item) => item["@type"] === "Person" && item.name === "Ana Lívia Calado da Costa" && item.identifier?.value === "02/34611" && item.workLocation?.name === "Garanhuns, Pernambuco, Brasil")
   || !schema["@graph"].some((item) => item["@type"] === "OnlineBusiness" && item.url === canonicalOrigin)
 ) {
   throw new Error("A identidade profissional no JSON-LD está ausente ou incorreta.");
