@@ -7,5 +7,6 @@ export const professionalContact = {
   whatsappHref: "https://wa.me/5587981709760?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20psicol%C3%B3gico.",
   instagramDisplay: "@psiana.livia",
   instagramHref: "https://www.instagram.com/psiana.livia/",
+  registryHref: "https://cadastro.cfp.org.br/visualizar.html?profissional=lzavXricyBYbO%2BxytOHe9BfotSnG7mKemdm%2B2nUiRbA%3D",
   locationDisplay: "Garanhuns — PE",
 };

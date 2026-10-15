@@ -16,7 +16,7 @@ export const professionalStructuredData = {
         "@type": "PropertyValue",
         propertyID: "CRP",
         value: "02/34611",
-        url: "https://cadastro.cfp.org.br/",
+        url: professionalContact.registryHref,
       },
       sameAs: [professionalContact.instagramHref],
       worksFor: { "@id": `${siteUrl}/#atendimento-online` },

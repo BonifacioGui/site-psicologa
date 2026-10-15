@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AnchorNav } from "../components/AnchorNav";
 import { PageHero } from "../components/PageHero";
 
-export const metadata: Metadata = { title: "Psicoterapia para adolescentes", description: "Informações sobre psicoterapia online para adolescentes e seus responsáveis." };
+export const metadata: Metadata = { title: "Psicoterapia online para adolescentes", description: "Psicoterapia online para adolescentes, com orientações sobre primeira sessão, sigilo, participação dos responsáveis e temas trabalhados." };
 
 export default function Page() {
   return <main>

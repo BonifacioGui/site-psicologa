@@ -4,8 +4,8 @@ import { professionalContact } from "../site";
 import { RegistryLink } from "../components/RegistryLink";
 
 export const metadata: Metadata = {
-  title: "Sobre mim",
-  description: "Conheça a formação, a experiência clínica em TCC, o interesse por Neurociências e a atuação profissional de Ana Lívia Calado da Costa.",
+  title: "Sobre a psicóloga",
+  description: "Conheça Ana Lívia Calado da Costa, psicóloga CRP 02/34611: formação, experiência clínica em TCC, Neurociências e atuação com atendimento online.",
 };
 
 export default function Page() {

@@ -69,16 +69,15 @@ const themeScript = `(() => {
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: "Ana Lívia Calado da Costa | Psicóloga", template: "%s | Ana Lívia Calado da Costa" },
-  description: "Atendimento psicológico online para adolescentes e jovens adultos com psicóloga sediada em Garanhuns, Pernambuco, pela Terapia Cognitivo-Comportamental.",
-  keywords: ["psicóloga online", "psicóloga em Garanhuns", "psicóloga Garanhuns PE", "terapia para adolescentes", "TCC"],
+  title: { default: "Psicóloga online em Garanhuns | Ana Lívia", template: "%s | Ana Lívia Psicologia" },
+  description: "Ana Lívia, psicóloga CRP 02/34611 sediada em Garanhuns, oferece atendimento exclusivamente online para adolescentes e jovens adultos pela TCC.",
   openGraph: {
     type: "website",
     locale: "pt_BR",
     url: siteUrl,
-    siteName: "Ana Lívia Calado da Costa | Psicóloga",
-    title: "Ana Lívia Calado da Costa | Psicóloga",
-    description: "Psicoterapia online para adolescentes e jovens adultos com profissional sediada em Garanhuns, Pernambuco.",
+    siteName: "Ana Lívia Psicologia",
+    title: "Psicóloga online em Garanhuns | Ana Lívia",
+    description: "Ana Lívia, psicóloga CRP 02/34611 sediada em Garanhuns, oferece atendimento exclusivamente online para adolescentes e jovens adultos pela TCC.",
     images: [{
       url: `${siteUrl}/og.png`,
       width: 1200,
@@ -88,8 +87,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ana Lívia Calado da Costa | Psicóloga",
-    description: "Psicoterapia online para adolescentes e jovens adultos com profissional sediada em Garanhuns, Pernambuco.",
+    title: "Psicóloga online em Garanhuns | Ana Lívia",
+    description: "Ana Lívia, psicóloga CRP 02/34611 sediada em Garanhuns, oferece atendimento exclusivamente online para adolescentes e jovens adultos pela TCC.",
     images: [`${siteUrl}/og.png`],
   },
   robots: { index: true, follow: true },
