@@ -19,6 +19,10 @@ export const professionalStructuredData = {
         url: professionalContact.registryHref,
       },
       sameAs: [professionalContact.instagramHref],
+      workLocation: {
+        "@type": "Place",
+        name: "Garanhuns, Pernambuco, Brasil",
+      },
       worksFor: { "@id": `${siteUrl}/#atendimento-online` },
     },
     {
