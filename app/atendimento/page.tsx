@@ -3,7 +3,7 @@ import { AnchorNav } from "../components/AnchorNav";
 import { PageHero } from "../components/PageHero";
 import { professionalContact } from "../site";
 
-export const metadata: Metadata = { title: "Atendimento psicológico", description: "Entenda a duração, os combinados e como funciona a primeira sessão de psicoterapia online." };
+export const metadata: Metadata = { title: "Atendimento psicológico online", description: "Saiba como funciona o atendimento psicológico online: primeira sessão, duração, sigilo, plataformas, horários, valores e contato inicial." };
 
 export default function Page() {
   return <main>
